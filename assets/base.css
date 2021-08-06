@@ -1798,6 +1798,7 @@ input[type='checkbox'] {
 /* Search */
 menu-drawer + .header__search {
   display: none;
+  background-color: black;
 }
 
 .header > .header__search {
