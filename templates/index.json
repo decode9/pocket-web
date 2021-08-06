@@ -24,7 +24,15 @@
       "block_order": [
         "heading",
         "button"
-      ]
+      ],
+        "settings": {
+          "image": "shopify:\/\/shop_images\/pour-over-coffee-with-two-rustic-cups.jpg",
+          "image_2": "shopify:\/\/shop_images\/rust-colored-teapot-with-its-lid-of-on-a-wooden-table.jpg",
+          "desktop_text_box_position": "flex-end",
+          "color_scheme": "accent-1",
+          "stack_images_on_mobile": true,
+          "adapt_height_first_image": false
+        }
     },
     "featured_products": {
       "type": "featured-collection",

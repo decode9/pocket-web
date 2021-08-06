@@ -2,7 +2,7 @@
 
 :root,
 .color-background-1 {
-  --color-foreground: var(--color-base-text);
+  /*--color-foreground: var(--color-base-text);*/
   --color-background: var(--color-base-background-1);
 }
 
@@ -216,7 +216,7 @@ body,
 .color-inverse,
 .color-accent-1,
 .color-accent-2 {
-  color: rgba(var(--color-foreground), 0.75);
+  /*color: rgba(var(--color-foreground), 0.75);*/
   background-color: rgb(var(--color-background));
 }
 
@@ -1632,7 +1632,7 @@ input[type='checkbox'] {
 .header-wrapper {
   display: block;
   position: relative;
-  background-color: rgb(var(--color-background));
+  background-color: #000;
 }
 
 .header-wrapper--border-bottom {
@@ -1644,9 +1644,10 @@ input[type='checkbox'] {
   grid-template-areas: 'left-icon heading icons';
   grid-template-columns: 1fr 2fr 1fr;
   align-items: center;
-  background-color: rgb(var(--color-background));
+  background-color: rgb(var(--color-background-2));
   padding-top: 1rem;
   padding-bottom: 1rem;
+  color: #FFF;
 }
 
 @media screen and (min-width: 990px) {
@@ -1849,6 +1850,8 @@ details[open] > .search-modal {
   height: 100%;
   padding: 0 5rem 0 1rem;
   line-height: 1.8;
+  background-color: black;
+  color: white;
 }
 
 .search-modal__form {
@@ -1918,6 +1921,7 @@ details[open] > .header__icon--menu .icon-hamburger {
   margin-left: -1.2rem;
   grid-area: navigation;
   display: none;
+  text-decoration-color: yellow;
 }
 
 .header--top-center .header__inline-menu,
