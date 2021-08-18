@@ -1647,7 +1647,7 @@ input[type='checkbox'] {
   color: #FFF;
   width: 100%;
   margin: 0;
-  padding:0.5% 2% 1% 2%;
+  
 }
 
 @media screen and (min-width: 990px) {
@@ -2067,7 +2067,7 @@ details-disclosure > details {
 .header__search_hidden{
   display: block;
   grid-column: 1/4;
-  margin: 2%;
+  margin-top: 4%;
 }
 
 @media screen and (min-width: 990px){
