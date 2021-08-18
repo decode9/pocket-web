@@ -2,7 +2,6 @@
 
 :root,
 .color-background-1 {
-  /*--color-foreground: var(--color-base-text);*/
   --color-background: var(--color-base-background-1);
 }
 
@@ -216,7 +215,6 @@ body,
 .color-inverse,
 .color-accent-1,
 .color-accent-2 {
-  /*color: rgba(var(--color-foreground), 0.75);*/
   background-color: rgb(var(--color-background));
 }
 
@@ -1180,7 +1178,6 @@ deferred-media {
 .customer select {
   -webkit-appearance: none;
   appearance: none;
-/*  background-color: transparent;*/
   border: 0;
   border-radius: 0;
   color: #000;
@@ -1787,13 +1784,10 @@ input[type='checkbox'] {
   width: 4.4rem;
 }
 
-.header__icon--cart {
-  position: relative;
-  margin-right: -1.2rem;
-}
+
 
 @media screen and (max-width: 989px) {
-  menu-drawer ~ .header__icons .header__icon--account {
+  menu-drawer ~ .header__icons .header__icon--account{
     display: none;
   }
 }
@@ -1970,8 +1964,6 @@ details[open] > .header__icon--menu .icon-hamburger {
 }
 
 .header__menu-item:hover span {
-  /*text-decoration: underline;
-  text-decoration-color: #f5be0b;*/
   text-underline-offset: 0.3rem;
 }
 
@@ -2060,10 +2052,30 @@ details-disclosure > details {
   text-decoration: none;
   background-color: #f5be0b;
   padding: 0.5rem 0;
+ 
   color: black;
 }
 .register_p{
   margin: 0 1.2rem;
   text-decoration: none;
   padding: 0.5rem 0;
+}
+
+.header__icons_hidden{
+  display: none;
+}
+.header__search_hidden{
+  display: block;
+  grid-column: 1/4;
+  margin: 2%;
+}
+
+@media screen and (min-width: 990px){
+  .header__icons_hidden{
+    display: flex;
+    align-items: center;
+  }
+  .header__search_hidden{
+    display: none;
+  }
 }
