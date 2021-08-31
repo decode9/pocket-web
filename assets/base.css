@@ -1554,7 +1554,7 @@ input[type='checkbox'] {
   align-items: center;
   font-size: 0.9rem;
   bottom: 0.8rem;
-  left: 2.2rem;
+  right: 3rem;
   line-height: 1.1;
 }
 
@@ -2052,7 +2052,6 @@ details-disclosure > details {
   text-decoration: none;
   background-color: #f5be0b;
   padding: 0.5rem 0;
- 
   color: black;
 }
 .register_p{
@@ -2078,4 +2077,66 @@ details-disclosure > details {
   .header__search_hidden{
     display: none;
   }
+}
+
+/* collection */
+.collection-list-slider{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  list-style: none;
+  padding: 0;
+}
+
+.collection-item-slider{
+  margin-bottom: 2.5%;
+  padding-right: 17%;
+  width: 45%;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  text-decoration: none;
+}
+.collection-item-slider img{
+  width: 100%;
+  height: 175px;
+  object-fit: contain;
+  margin-right: 10%;
+  top: 0;
+}
+.collection-item-slider button{
+  top: 0;
+  right: 0;
+  padding: 0 2%;
+  background-color: #f5be0b;
+  height: 100%;
+  text-decoration: none;
+  border: none;
+  position: absolute;
+  display: flex;
+  align-items: center;
+}
+/*.card-container{
+  text-decoration: none;
+  color: #000;
+}*/
+.item-info{
+  position: absolute;
+  bottom: 0;
+  margin-right: 35%;
+  text-decoration: none;
+  color: #000;
+}
+.item-info_text{
+  display: block;
+}
+.oferta{
+  position: absolute;
+  top: 0;
+  text-decoration: none;
+  color: #000;
+  background-color: #f5be0b;
+  padding: 2.5% 6%;
+  font-size: 1rem;
 }
