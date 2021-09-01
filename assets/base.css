@@ -2176,8 +2176,8 @@ details-disclosure > details {
 }
 .slider-prev,.slider-next{
   position: absolute;
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
   top: calc(50% - 35px);
   cursor: pointer;
   line-height: 30px;
@@ -2186,8 +2186,8 @@ details-disclosure > details {
   border-radius: 100%;
 }
 .slider-next{
-  right: -30px;
+  right: -35px;
 }
 .slider-prev{
-  left: -30px;
+  left: -35px;
 }
