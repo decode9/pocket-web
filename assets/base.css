@@ -202,7 +202,6 @@ html.no-js .no-js-hidden {
 }
 
 .spaced-section--full-width:first-child {
-  margin-top: 0;
 }
 
 .spaced-section--full-width:last-child {
@@ -822,9 +821,9 @@ summary::-webkit-details-marker {
 .grid {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 2rem;
+  /*margin-bottom: 2rem;
   margin-left: -0.5rem;
-  padding: 0;
+  padding: 0;*/
   list-style: none;
 }
 
@@ -886,23 +885,23 @@ summary::-webkit-details-marker {
 }
 
 @media screen and (min-width: 750px) {
-  .grid--3-col .grid__item {
+  /*.grid--3-col .grid__item {
     width: calc(33.33% - 1rem * 2 / 3);
-  }
+  }*/
 }
 
-.grid--2-col .grid__item {
+/*.grid--2-col .grid__item {
   width: calc(50% - 0.5rem / 2);
-}
+}*/
 
 @media screen and (min-width: 750px) {
-  .grid--2-col .grid__item {
+  /*.grid--2-col .grid__item {
     width: calc(50% - 1rem / 2);
-  }
+  }*/
 
-  .grid--4-col-tablet .grid__item {
+  /*.grid--4-col-tablet .grid__item {
     width: calc(25% - 1rem * 3 / 4);
-  }
+  }*/
 
   .grid--3-col-tablet .grid__item {
     width: calc(33.33% - 1rem * 2 / 3);
@@ -1009,11 +1008,9 @@ summary::-webkit-details-marker {
 .media > *:not(.zoom, .deferred-media__poster-button),
 .media model-viewer {
   display: block;
-  max-width: 100%;
-  position: absolute;
   top: 0;
   left: 0;
-  height: 100%;
+  height: auto;
   width: 100%;
 }
 
@@ -1609,10 +1606,10 @@ input[type='checkbox'] {
 /* section-header */
 #shopify-section-header {
   z-index: 3;
-  will-change: transform;
+  /*will-change: transform;*/
 }
 
-.shopify-section-header-sticky {
+/*.shopify-section-header-sticky {
   position: sticky;
   top: 0;
 }
@@ -1623,7 +1620,7 @@ input[type='checkbox'] {
 
 #shopify-section-header.animate {
   transition: transform 0.15s ease-out;
-}
+}*/
 
 /* Main Header Layout */
 .header-wrapper {
@@ -1641,12 +1638,13 @@ input[type='checkbox'] {
   grid-template-areas: 'left-icon heading icons';
   grid-template-columns: 1fr 2fr 1fr;
   align-items: center;
-  background-color: rgb(var(--color-background-2));
+  background-color: #000;
   padding-top: 1rem;
   padding-bottom: 1rem;
   color: #FFF;
   width: 100%;
   margin: 0;
+  position: fixed ;
   
 }
 
