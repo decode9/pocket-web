@@ -2083,7 +2083,7 @@ details-disclosure > details {
 .collection-list-slider{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   list-style: none;
   padding: 0;
 }
@@ -2091,8 +2091,7 @@ details-disclosure > details {
 .collection-item-slider{
   margin-bottom: 2.5%;
   padding-right: 17%;
-  width: 45%;
-  height: 200px;
+  width: 48%;
   display: flex;
   align-items: center;
   position: relative;
@@ -2117,10 +2116,6 @@ details-disclosure > details {
   display: flex;
   align-items: center;
 }
-/*.card-container{
-  text-decoration: none;
-  color: #000;
-}*/
 .item-info{
   position: absolute;
   bottom: 0;
@@ -2139,4 +2134,60 @@ details-disclosure > details {
   background-color: #f5be0b;
   padding: 2.5% 6%;
   font-size: 1rem;
+}
+.slider-desktop{
+  display: none;
+}
+@media screen and (min-width: 990px){
+  .slider-mobile{
+    display: none;
+  }
+  .slider-desktop{
+    display: flex;
+  }
+  .oferta{
+    padding: 2% 4%;
+  }
+  .item-info{
+    bottom: 5%;
+    left: 5%;
+  }
+}
+.collection-list-slider-d{
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+}
+.collection-item-slider-d{
+  position: relative;
+  margin: 0.5%;
+}
+.collection-item-slider-d button{
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  padding: 3% 5%;
+  background-color: #f5be0b;
+  border: none;
+}
+
+.slider-desktop{
+  position: relative;
+}
+.slider-prev,.slider-next{
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: calc(50% - 35px);
+  cursor: pointer;
+  line-height: 30px;
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 100%;
+}
+.slider-next{
+  right: -30px;
+}
+.slider-prev{
+  left: -30px;
 }
