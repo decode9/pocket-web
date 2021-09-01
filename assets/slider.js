@@ -1,3 +1,4 @@
+
 function sliderAuto(slider, miliseconds) {
  slider.isLastSlide = function() {
    return slider.page >= slider.dots.childElementCount - 1;
@@ -21,6 +22,13 @@ function sliderAuto(slider, miliseconds) {
  slide();
 }
 
+window.addEventListener('load',function (){
+  new Glider(document.querySelector('.collection-list-slider-d'), {
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    }
+  })
+
 window.addEventListener('load',function () {
   const slider=new Glider(document.querySelector('.banner-slider'),{
     slidesToShow: 1,
@@ -31,6 +39,5 @@ window.addEventListener('load',function () {
       next: '.slider-next'
     },
   })
-
   sliderAuto(slider,5000)
 })

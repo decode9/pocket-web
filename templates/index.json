@@ -14,10 +14,10 @@
     "featured_products": {
       "type": "featured-collection",
       "settings": {
-        "title": "Featured products",
-        "collection": "frontpage",
-        "products_to_show": 4,
-        "show_view_all": true,
+        "title": "Ofertas",
+        "collection": "ofertas",
+        "products_to_show": 8,
+        "show_view_all": false,
         "swipe_on_mobile": false,
         "image_ratio": "adapt",
         "show_secondary_image": false,

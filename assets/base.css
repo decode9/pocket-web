@@ -1551,7 +1551,7 @@ input[type='checkbox'] {
   align-items: center;
   font-size: 0.9rem;
   bottom: 0.8rem;
-  left: 2.2rem;
+  right: 3rem;
   line-height: 1.1;
 }
 
@@ -2050,7 +2050,6 @@ details-disclosure > details {
   text-decoration: none;
   background-color: #f5be0b;
   padding: 0.5rem 0;
- 
   color: black;
 }
 .register_p{
@@ -2076,4 +2075,117 @@ details-disclosure > details {
   .header__search_hidden{
     display: none;
   }
+}
+
+/* collection */
+.collection-list-slider{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+}
+
+.collection-item-slider{
+  margin-bottom: 2.5%;
+  padding-right: 17%;
+  width: 48%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  text-decoration: none;
+}
+.collection-item-slider img{
+  width: 100%;
+  height: 175px;
+  object-fit: contain;
+  margin-right: 10%;
+  top: 0;
+}
+.collection-item-slider button{
+  top: 0;
+  right: 0;
+  padding: 0 2%;
+  background-color: #f5be0b;
+  height: 100%;
+  text-decoration: none;
+  border: none;
+  position: absolute;
+  display: flex;
+  align-items: center;
+}
+.item-info{
+  position: absolute;
+  bottom: 0;
+  margin-right: 35%;
+  text-decoration: none;
+  color: #000;
+}
+.item-info_text{
+  display: block;
+}
+.oferta{
+  position: absolute;
+  top: 0;
+  text-decoration: none;
+  color: #000;
+  background-color: #f5be0b;
+  padding: 2.5% 6%;
+  font-size: 1rem;
+}
+.slider-desktop{
+  display: none;
+}
+@media screen and (min-width: 990px){
+  .slider-mobile{
+    display: none;
+  }
+  .slider-desktop{
+    display: flex;
+  }
+  .oferta{
+    padding: 2% 4%;
+  }
+  .item-info{
+    bottom: 5%;
+    left: 5%;
+  }
+}
+.collection-list-slider-d{
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+}
+.collection-item-slider-d{
+  position: relative;
+  margin: 0.5%;
+}
+.collection-item-slider-d button{
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  padding: 3% 5%;
+  background-color: #f5be0b;
+  border: none;
+}
+
+.slider-desktop{
+  position: relative;
+}
+.slider-prev,.slider-next{
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  top: calc(50% - 35px);
+  cursor: pointer;
+  line-height: 30px;
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 100%;
+}
+.slider-next{
+  right: -35px;
+}
+.slider-prev{
+  left: -35px;
 }
