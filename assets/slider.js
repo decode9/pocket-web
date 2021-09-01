@@ -22,12 +22,6 @@ function sliderAuto(slider, miliseconds) {
  slide();
 }
 
-window.addEventListener('load',function (){
-  new Glider(document.querySelector('.collection-list-slider-d'), {
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    }
-  })
 
 window.addEventListener('load',function () {
   const slider=new Glider(document.querySelector('.banner-slider'),{
@@ -40,4 +34,16 @@ window.addEventListener('load',function () {
     },
   })
   sliderAuto(slider,5000)
+})
+
+window.addEventListener('load',function (){
+  new Glider(document.querySelector('.collection-list-slider-d'), {
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    rewind:true,
+    arrows: {
+      prev: '.slider-prev',
+      next: '.slider-next'
+    }
+  })
 })
