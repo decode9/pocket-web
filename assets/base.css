@@ -189,10 +189,6 @@ html.no-js .no-js-hidden {
   margin-top: 5rem;
 }
 
-.spaced-section {
-  margin-top: 5rem;
-}
-
 .spaced-section:last-child {
   margin-bottom: 5rem;
 }
@@ -674,16 +670,14 @@ summary::-webkit-details-marker {
 *:focus-visible {
   outline: 0.2rem solid rgba(var(--color-foreground), 0.5);
   outline-offset: 0.3rem;
-  box-shadow: 0 0 0 0.3rem rgb(var(--color-background)),
-    0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
+  box-shadow: 0 0 0 0.3rem rgb(var(--color-background)), 0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
 }
 
 /* Fallback - for browsers that don't support :focus-visible, a fallback is set for :focus */
 *:focus {
   outline: 0.2rem solid rgba(var(--color-foreground), 0.5);
   outline-offset: 0.3rem;
-  box-shadow: 0 0 0 0.3rem rgb(var(--color-background)),
-    0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
+  box-shadow: 0 0 0 0.3rem rgb(var(--color-background)), 0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
 }
 
 /* Negate the fallback side-effect for browsers that support :focus-visible */
@@ -1090,14 +1084,12 @@ deferred-media {
 
 .button:focus-visible {
   box-shadow: 0 0 0 0.1rem rgba(var(--color-button), var(--alpha-button-border)),
-    0 0 0 0.3rem rgb(var(--color-background)),
-    0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
+    0 0 0 0.3rem rgb(var(--color-background)), 0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
 }
 
 .button:focus {
   box-shadow: 0 0 0 0.1rem rgba(var(--color-button), var(--alpha-button-border)),
-    0 0 0 0.3rem rgb(var(--color-background)),
-    0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
+    0 0 0 0.3rem rgb(var(--color-background)), 0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
 }
 
 .button,
@@ -1208,16 +1200,14 @@ deferred-media {
 .field__input:focus-visible,
 .select__select:focus-visible,
 .field input:focus-visible {
-  box-shadow: 0 0 0 0.1rem rgba(var(--color-foreground), 0.55),
-    0 0 0 0.3rem rgb(var(--color-background)),
+  box-shadow: 0 0 0 0.1rem rgba(var(--color-foreground), 0.55), 0 0 0 0.3rem rgb(var(--color-background)),
     0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
 }
 
 .field__input:focus,
 .select__select:focus,
 .field input:focus {
-  box-shadow: 0 0 0 0.1rem rgba(var(--color-foreground), 0.55),
-    0 0 0 0.3rem rgb(var(--color-background)),
+  box-shadow: 0 0 0 0.1rem rgba(var(--color-foreground), 0.55), 0 0 0 0.3rem rgb(var(--color-background)),
     0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
 }
 
@@ -1271,13 +1261,12 @@ deferred-media {
 .field__label,
 .customer .field label {
   font-size: 1.6rem;
-  left: 1.5rem;
+  left: 2rem;
   top: 1rem;
   margin-bottom: 0;
   pointer-events: none;
   position: absolute;
-  transition: top var(--duration-short) ease,
-    font-size var(--duration-short) ease;
+  transition: top var(--duration-short) ease, font-size var(--duration-short) ease;
   color: #000;
   letter-spacing: 0.1rem;
   line-height: 1.5;
@@ -1644,10 +1633,9 @@ input[type='checkbox'] {
   background-color: rgb(var(--color-background-2));
   padding-top: 1rem;
   padding-bottom: 1rem;
-  color: #FFF;
+  color: #fff;
   width: 100%;
   margin: 0;
-  
 }
 
 @media screen and (min-width: 990px) {
@@ -1784,10 +1772,8 @@ input[type='checkbox'] {
   width: 4.4rem;
 }
 
-
-
 @media screen and (max-width: 989px) {
-  menu-drawer ~ .header__icons .header__icon--account{
+  menu-drawer ~ .header__icons .header__icon--account {
     display: none;
   }
 }
@@ -1980,8 +1966,7 @@ details[open] > .header__icon--menu .icon-hamburger {
 }
 
 .header__submenu {
-  transition: opacity var(--duration-default) ease,
-    transform var(--duration-default) ease;
+  transition: opacity var(--duration-default) ease, transform var(--duration-default) ease;
 }
 
 .header__submenu.list-menu {
@@ -2047,35 +2032,186 @@ details-disclosure > details {
   }
 }
 
-.login_p{
+.login_p {
   margin: 0 1.2rem;
   text-decoration: none;
   background-color: #f5be0b;
   padding: 0.5rem 0;
- 
+
   color: black;
 }
-.register_p{
+.register_p {
   margin: 0 1.2rem;
   text-decoration: none;
   padding: 0.5rem 0;
 }
 
-.header__icons_hidden{
+.header__icons_hidden {
   display: none;
 }
-.header__search_hidden{
+.header__search_hidden {
   display: block;
   grid-column: 1/4;
   margin-top: 4%;
 }
 
-@media screen and (min-width: 990px){
-  .header__icons_hidden{
+@media screen and (min-width: 990px) {
+  .header__icons_hidden {
     display: flex;
     align-items: center;
   }
-  .header__search_hidden{
+  .header__search_hidden {
     display: none;
   }
+}
+
+.productContent {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.productContainer {
+  width: 21%;
+  height: 400px;
+  margin: 2%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.imageContainer {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 5%;
+}
+.productImage {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.productInfo {
+  height: 50%;
+  box-sizing: border-box;
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #f1f1f2;
+}
+
+.productTitle {
+  font-size: 15px;
+  margin: 0;
+  font-weight: 600;
+}
+
+.productDescription {
+  height: inherit;
+  display: block;
+  overflow: hidden;
+}
+
+.productDescription > p {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  overflow: hidden;
+  height: 100%;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.productDescription > p > strong {
+  font-weight: normal;
+}
+.productDescription > p > b {
+  font-weight: normal;
+}
+.productDescription > p:first-child {
+  display: none;
+}
+.productSales {
+  height: max-content;
+  display: flex;
+  justify-content: space-between;
+}
+
+.productButton {
+  padding: 10px 15px;
+  background-color: #f5be0b;
+  color: #000;
+  font-size: 15px;
+  border: none;
+}
+
+.mainCollection {
+  display: flex;
+}
+.collectionFilters {
+  width: 300px;
+  background-color: #f1f1f2;
+  box-shadow: 0px 4px 4px #000;
+  padding: 30px;
+  box-sizing: border-box;
+}
+.collectionFilterForm {
+  width: 240px;
+}
+
+.collectionSort {
+  margin-bottom: 20px;
+}
+.sortSelect {
+  background: transparent;
+  border: 2px solid #f5be0b;
+  cursor: pointer;
+}
+.collectionFilterBox {
+  width: 100%;
+}
+
+.collectionFilter {
+  width: 100%;
+  border: 2px solid #f5be0b;
+  padding: 0.9rem !important;
+  margin: 10px 0;
+}
+
+.maxFilterLabel {
+  font-size: 12px;
+}
+
+.resetFilter {
+  font-size: 10px;
+  color: #f5be0b;
+}
+
+.priceRange{
+  width: 100%;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.inputFilterPrice{
+  margin-left: 5px;
+  background-color: transparent;
+  border: 2px solid #f5be0b;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.priceData{
+  width: 40%;
+  align-items: center;
 }

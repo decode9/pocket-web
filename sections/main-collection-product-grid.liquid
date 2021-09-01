@@ -13,11 +13,32 @@
 
 {%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}
 
-<div class="page-width collection-filters" id="main-collection-filters" data-id="{{ section.id }}">
+<div class="mainCollection">
+<div class="collectionFilters" id="main-collection-filters" data-id="{{ section.id }}">
   {%- if section.settings.enable_filtering or section.settings.enable_sorting -%}
     {%- assign total_active_values = 0 -%}
     <collection-filters-form class="facets small-hide">
-      <form id="CollectionFiltersForm" class="facets__form">
+      <form id="CollectionFiltersForm" class="collectionFilterForm">
+        {%- if section.settings.enable_sorting -%}
+          <div class="collectionSort">
+            <div class="collection-filters__field">
+              <label class="collection-filters__label" for="SortBy">{{ 'sections.collection_template.sort_by_label' | t }}</label>
+              <div class="select">
+                {%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}
+                <select name="sort_by" class="select__select collection-filters__sort sortSelect" id="SortBy" aria-describedby="a11y-refresh-page-message">
+                  {%- for option in collection.sort_options -%}
+                    <option value="{{ option.value | escape }}"{% if option.value == sort_by %} selected="selected"{% endif %}>{{ option.name | escape }}</option>
+                  {%- endfor -%}
+                </select>
+                {% render 'icon-caret' %}
+              </div>
+            </div>
+
+            <noscript>
+              <button type="submit" class="button button--small">{{ 'sections.collection_template.sort_button' | t }}</button>
+            </noscript>
+          </div>
+        {%- endif -%}
         {% if section.settings.enable_filtering %}
           <div class="facets__wrapper">
             {%- unless collection.filters == empty -%}
@@ -28,8 +49,8 @@
               {%- assign total_active_values = total_active_values | plus: filter.active_values.size -%}
               {% case filter.type %}
               {% when 'list' %}
-                <details class="disclosure-has-popup facets__disclosure js-filter" data-index="{{ forloop.index }}">
-                  <summary class="facets__summary">
+                <details class="disclosure-has-popup facets__disclosure js-filter collectionFilterBox" data-index="{{ forloop.index }}">
+                  <summary class="facets__summary collectionFilter">
                     <div>
                       <span>{{ filter.label | escape }}</span>
                       <span class="count-bubble">{%- if filter.active_values.size > 0 -%}{{ filter.active_values.size }}{%- endif -%}</span>
@@ -76,24 +97,23 @@
                     assign uses_comma_decimals = true
                   endif
                 %}
-                <details class="disclosure-has-popup facets__disclosure js-filter" data-index="{{ forloop.index }}">
+                <div class="priceFilterSummary" open="true">
                   <summary class="facets__summary">
                     <div>
                       <span>{{ filter.label | escape }}</span>
                       <span class="count-bubble{%- if filter.min_value.value or filter.max_value.value -%}{{ filter.active_values.size }} count-bubble--dot{% endif %}"></span>
-                      {% render 'icon-caret' %}
                     </div>
                   </summary>
-                  <div class="facets__display">
-                    <div class="facets__header">
+                  <div class="displayPriceFilter">
+                    <div class="maxFilter">
                       {%- assign max_price_amount = filter.range_max | money | escape -%}
-                      <span class="facets__selected">{{ "sections.collection_template.max_price" | t: price: max_price_amount }}</span>
-                      <a href="{{ filter.url_to_remove }}" class="facets__reset link underlined-link js-facet-remove" >{{ 'sections.collection_template.reset' | t }}</a>
+                      <p class="maxFilterLabel">{{ "sections.collection_template.max_price" | t: price: max_price_amount }}</p>
+                      <a href="{{ filter.url_to_remove }}" class="resetFilter" >{{ 'sections.collection_template.reset' | t }}</a>
                     </div>
-                    <price-range class="facets__price">
-                      <div class="field">
+                    <price-range class="priceRange">
+                      <div class="field priceData">
                         <span class="field__currency">{{ cart.currency.symbol }}</span>
-                        <input class="field__input"
+                        <input class="field__input inputFilterPrice"
                           name="{{ filter.min_value.param_name }}"
                           id="Filter-{{ filter.label | escape }}-GTE"
                           {%- if filter.min_value.value -%}
@@ -110,9 +130,9 @@
                         </input>
                         <label class="field__label" for="Filter-{{ filter.label | escape }}-GTE">{{ 'sections.collection_template.from' | t }}</label>
                       </div>
-                      <div class="field">
+                      <div class="field priceData">
                         <span class="field__currency">{{ cart.currency.symbol }}</span>
-                        <input class="field__input"
+                        <input class="field__input inputFilterPrice"
                           name="{{ filter.max_value.param_name }}"
                           id="Filter-{{ filter.label | escape }}-LTE"
                           {%- if filter.max_value.value -%}
@@ -131,7 +151,7 @@
                       </div>
                     </div>
                   </price-range>
-                </details>
+                </div>
               {% endcase %}
             {%- endfor -%}
             <noscript>
@@ -170,26 +190,7 @@
           <input type="hidden" name="q" value="{{ collection.current_vendor }}{{ collection.current_type }}">
         {% endif %}
 
-        {%- if section.settings.enable_sorting -%}
-          <div class="collection-filters__item sorting">
-            <div class="collection-filters__field">
-              <label class="collection-filters__label" for="SortBy">{{ 'sections.collection_template.sort_by_label' | t }}</label>
-              <div class="select">
-                {%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}
-                <select name="sort_by" class="select__select collection-filters__sort" id="SortBy" aria-describedby="a11y-refresh-page-message">
-                  {%- for option in collection.sort_options -%}
-                    <option value="{{ option.value | escape }}"{% if option.value == sort_by %} selected="selected"{% endif %}>{{ option.name | escape }}</option>
-                  {%- endfor -%}
-                </select>
-                {% render 'icon-caret' %}
-              </div>
-            </div>
-
-            <noscript>
-              <button type="submit" class="button button--small">{{ 'sections.collection_template.sort_button' | t }}</button>
-            </noscript>
-          </div>
-        {%- endif -%}
+        
       </form>
     </collection-filters-form>
     <menu-drawer class="mobile-facets__wrapper" data-breakpoint="mobile">
@@ -399,7 +400,7 @@
 
 <script src="{{ 'collection-filters-form.js' | asset_url }}" defer="defer"></script>
 
-<div id="CollectionProductGrid">
+<div id="CollectionProductGrid" class="collectionData">
   {%- paginate collection.products by section.settings.products_per_page -%}
     {%- if collection.products.size == 0 -%}
       <div class="collection collection--empty page-width" id="main-collection-product-grid" data-id="{{ section.id }}">
@@ -436,13 +437,9 @@
           {{ 'sections.collection_template.product_count' | t: product_count: collection.products_count, count: collection.all_products_count }}
         </p>
 
-        <ul id="main-collection-product-grid" data-id="{{ section.id }}" class="
-          grid grid--2-col
-          {% if collection.products_count < 4 %} grid--{{ collection.products_count }}-col-tablet{% else %}
-            {% if collection.products_count == 4 %} grid--4-col-desktop{% else %} grid--3-col-tablet grid--one-third-max grid--4-col-desktop grid--quarter-max{% endif %}
-          {% endif %} negative-margin">
+        <div id="main-collection-product-grid" data-id="{{ section.id }}" class="productContent">
           {%- for product in collection.products -%}
-            <li class="grid__item">
+            
               {% render 'product-card',
                 product_card_product: product,
                 media_size: section.settings.image_ratio,
@@ -450,9 +447,9 @@
                 add_image_padding: section.settings.add_image_padding,
                 show_vendor: section.settings.show_vendor
               %}
-            </li>
+            
           {%- endfor -%}
-        </ul>
+        </div>
 
         {%- if paginate.pages > 1 -%}
           {% render 'pagination', paginate: paginate, anchor: '', class: '' %}
@@ -461,7 +458,7 @@
     {%- endif -%}
   {%- endpaginate -%}
 </div>
-
+</div>
 {% schema %}
 {
   "name": "t:sections.main-collection-product-grid.name",
