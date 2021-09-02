@@ -48,4 +48,9 @@ window.addEventListener('load',function (){
       next: '.slider-next-collection'
     }
   })
+  new Glider(document.querySelector('.column-list'), {
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    draggable: true,
+  })
 })

@@ -222,3 +222,32 @@
     padding-right: 1.5rem;
   }
 }
+
+.column-item{
+  width: 30%;
+  padding: 0;
+  margin: 3% 2%;
+}
+.column-list{
+ padding: 0;
+ list-style: none;
+}
+.column-title{
+  text-align: center;
+}
+
+@media screen and (min-width: 990px){
+  .column-item{
+    display: flex;
+    width: 15%;
+    padding: 0;
+    margin: 3% 2%;
+  }
+  .column-list-d{
+    display: flex;
+    justify-content: space-between;
+  }
+  .column-title{
+    text-align: center;
+  }
+}
