@@ -27,6 +27,7 @@ window.addEventListener('load',function () {
   const slider=new Glider(document.querySelector('.banner-slider'),{
     slidesToShow: 1,
     dots: '.slider-indicator',
+    draggable: true,
     rewind:true,
     arrows: {
       prev: '.slider-prev',
@@ -40,10 +41,11 @@ window.addEventListener('load',function (){
   new Glider(document.querySelector('.collection-list-slider-d'), {
     slidesToShow: 4,
     slidesToScroll: 1,
+    draggable: true,
     rewind:true,
     arrows: {
-      prev: '.slider-prev',
-      next: '.slider-next'
+      prev: '.slider-prev-collection',
+      next: '.slider-next-collection'
     }
   })
 })

@@ -2172,7 +2172,7 @@ details-disclosure > details {
 .slider-desktop{
   position: relative;
 }
-.slider-prev,.slider-next{
+.slider-prev-collection,.slider-next-collection{
   position: absolute;
   width: 35px;
   height: 35px;
@@ -2183,9 +2183,9 @@ details-disclosure > details {
   border: 1px solid #000;
   border-radius: 100%;
 }
-.slider-next{
+.slider-next-collection{
   right: -35px;
 }
-.slider-prev{
+.slider-prev-collection{
   left: -35px;
 }
