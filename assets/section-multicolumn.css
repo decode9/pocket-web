@@ -250,7 +250,27 @@
     display: flex;
     justify-content: space-between;
   }
-  .column-title{
-    text-align: center;
-  }
+}
+
+.brands-list{
+  display: flex;
+  list-style: none;
+  padding: 5%;
+}
+.brands-item{
+  min-width: 60px;
+  display: flex;
+  justify-content: center;
+}
+.brands-placeholder{
+  background-color: #f5be0b;
+  width: 60px;
+  height: 60px;
+}
+.brands-info{
+  font-size: 1.3rem;
+  margin: 0;
+}
+.brands-title{
+  text-align: center;
 }
