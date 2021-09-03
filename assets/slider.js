@@ -57,4 +57,13 @@ window.addEventListener('load',function (){
     slidesToShow: 5,
     slidesToScroll: 1,
   })
+  new Glider(document.querySelector('.brands-list-desktop'), {
+    slidesToShow: 12,
+    slidesToScroll: 1,
+    draggable: true,
+    arrows: {
+      prev: '.slider-prev-brands',
+      next: '.slider-next-brands'
+    }
+  })
 })

@@ -274,3 +274,25 @@
 .brands-title{
   text-align: center;
 }
+.brands-list-desktop{
+  overflow: hidden;
+  margin-top: 2%;
+  padding: 0;
+}
+
+.slider-prev-brands,.slider-next-brands{
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  top: 35%;
+  cursor: pointer;
+  line-height: 30px;
+  background-color: #fff;
+  border: none;
+}
+.slider-next-brands{
+  right: -35px;
+}
+.slider-prev-brands{
+  left: -35px;
+}
