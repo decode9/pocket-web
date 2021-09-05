@@ -58,11 +58,129 @@
         "color_scheme": "background-1",
         "layout": "image_first"
       }
+    },
+    "1630606484fd78ef5d": {
+      "type": "multicolumn-categories",
+      "blocks": {
+        "1630606484fd78ef5d-0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Icono_Cocina-01.png",
+            "title": "",
+            "text": ""
+          }
+        },
+        "1630606484fd78ef5d-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Icono_Cuidado_Personal-01.png",
+            "title": "",
+            "text": ""
+          }
+        },
+        "1630606484fd78ef5d-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Icono_Bebes-01.png",
+            "title": "",
+            "text": ""
+          }
+        },
+        "e180dc5d-f341-4ff1-acc7-90dc1fcff81f": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Icono_Mascotas-01.png",
+            "title": "",
+            "text": ""
+          }
+        },
+        "4d5ec0a5-3695-4481-baa8-f63f309f6377": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Icono_Automotriz-01.png",
+            "title": "",
+            "text": ""
+          }
+        },
+        "7451d79e-b8f0-4b8d-9a86-3d702ea8c939": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Icono_Hogar-01.png",
+            "title": "",
+            "text": ""
+          }
+        },
+        "f337fbf1-187a-450b-80d4-7394a7cfbebc": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Icono_Entretenimiento-01.png",
+            "title": "",
+            "text": ""
+          }
+        },
+        "c771b77c-cf9a-4e74-9313-838ce0b10a2f": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Icono_Tecnologia-01.png",
+            "title": "",
+            "text": ""
+          }
+        },
+        "68def21d-e8ba-4232-8229-b5f691ceaf89": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Icono_Ferreteria-01.png",
+            "title": "",
+            "text": ""
+          }
+        },
+        "dc5e60eb-f976-4690-b746-0c14c5e98e12": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Icono_Camping-01.png",
+            "title": "",
+            "text": ""
+          }
+        },
+        "894a2fdb-98c9-4038-a233-ed5fff07110c": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Icono_Cocina-02.png",
+            "title": "",
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "1630606484fd78ef5d-0",
+        "1630606484fd78ef5d-1",
+        "1630606484fd78ef5d-2",
+        "e180dc5d-f341-4ff1-acc7-90dc1fcff81f",
+        "4d5ec0a5-3695-4481-baa8-f63f309f6377",
+        "7451d79e-b8f0-4b8d-9a86-3d702ea8c939",
+        "f337fbf1-187a-450b-80d4-7394a7cfbebc",
+        "c771b77c-cf9a-4e74-9313-838ce0b10a2f",
+        "68def21d-e8ba-4232-8229-b5f691ceaf89",
+        "dc5e60eb-f976-4690-b746-0c14c5e98e12",
+        "894a2fdb-98c9-4038-a233-ed5fff07110c"
+      ],
+      "settings": {
+        "title": "Categorias",
+        "image_width": "full",
+        "image_ratio": "square",
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "swipe_on_mobile": false
+      }
     }
   },
   "order": [
     "16293170045db263e5",
     "featured_products",
-    "image_text"
+    "image_text",
+    "1630606484fd78ef5d"
   ]
 }
