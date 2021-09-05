@@ -53,4 +53,18 @@ window.addEventListener('load',function (){
     slidesToScroll: 1,
     draggable: true,
   })
+  new Glider(document.querySelector('.brands-list'), {
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    draggable: true,
+  })
+  new Glider(document.querySelector('.brands-list-desktop'), {
+    slidesToShow: 12,
+    slidesToScroll: 1,
+    draggable: true,
+    arrows: {
+      prev: '.slider-prev-brands',
+      next: '.slider-next-brands'
+    }
+  })
 })

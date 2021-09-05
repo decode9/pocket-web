@@ -25,38 +25,30 @@
         "show_vendor": false
       }
     },
-    "image_text": {
-      "type": "image-with-text",
+    "16306815841d71b05c": {
+      "type": "image-banner",
       "blocks": {
-        "heading": {
-          "type": "heading",
+        "1630681584b9de3cbb-2": {
+          "type": "buttons",
           "settings": {
-            "heading": "Image with text"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>"
-          }
-        },
-        "button": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button label",
-            "button_link": ""
+            "button_label_1": "Ver ofertas",
+            "button_link_1": "shopify:\/\/collections\/ofertas",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
           }
         }
       },
       "block_order": [
-        "heading",
-        "text",
-        "button"
+        "1630681584b9de3cbb-2"
       ],
       "settings": {
-        "height": "adapt",
+        "image": "shopify:\/\/shop_images\/Baner_y_tarjetas_gift_card_Pocket-06.png",
+        "desktop_text_box_position": "center",
         "color_scheme": "background-1",
-        "layout": "image_first"
+        "stack_images_on_mobile": true,
+        "adapt_height_first_image": false
       }
     },
     "1630606484fd78ef5d": {
@@ -175,12 +167,158 @@
         "button_link": "",
         "swipe_on_mobile": false
       }
+    },
+    "16306878120d305c7b": {
+      "type": "multicolumn-marcas",
+      "blocks": {
+        "16306878120cd295ce-0": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": ""
+          }
+        },
+        "16306878120cd295ce-1": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": ""
+          }
+        },
+        "16306878120cd295ce-2": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": ""
+          }
+        },
+        "16306878120cd295ce-3": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": ""
+          }
+        },
+        "16306878120cd295ce-4": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": ""
+          }
+        },
+        "16306878120cd295ce-5": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": ""
+          }
+        },
+        "16306878120cd295ce-6": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": ""
+          }
+        },
+        "16306878120cd295ce-7": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": ""
+          }
+        },
+        "16306878120cd295ce-8": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": ""
+          }
+        },
+        "16306878120cd295ce-9": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": ""
+          }
+        },
+        "16306878120cd295ce-10": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": ""
+          }
+        },
+        "16306878120cd295ce-11": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": ""
+          }
+        },
+        "16306878120cd295ce-12": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": ""
+          }
+        },
+        "16306878120cd295ce-13": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": ""
+          }
+        },
+        "16306878120cd295ce-14": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": ""
+          }
+        },
+        "16306878120cd295ce-15": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "16306878120cd295ce-0",
+        "16306878120cd295ce-1",
+        "16306878120cd295ce-2",
+        "16306878120cd295ce-3",
+        "16306878120cd295ce-4",
+        "16306878120cd295ce-5",
+        "16306878120cd295ce-6",
+        "16306878120cd295ce-7",
+        "16306878120cd295ce-8",
+        "16306878120cd295ce-9",
+        "16306878120cd295ce-10",
+        "16306878120cd295ce-11",
+        "16306878120cd295ce-12",
+        "16306878120cd295ce-13",
+        "16306878120cd295ce-14",
+        "16306878120cd295ce-15"
+      ],
+      "settings": {
+        "title": "Marcas",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "swipe_on_mobile": false
+      }
     }
   },
   "order": [
     "16293170045db263e5",
     "featured_products",
-    "image_text",
-    "1630606484fd78ef5d"
+    "16306815841d71b05c",
+    "1630606484fd78ef5d",
+    "16306878120d305c7b"
   ]
 }
