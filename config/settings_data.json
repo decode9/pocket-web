@@ -40,7 +40,7 @@
           "footer-0": {
             "type": "link_list",
             "settings": {
-              "heading": "Quick links",
+              "heading": "title",
               "menu": "footer"
             }
           }
@@ -51,11 +51,11 @@
         "settings": {
           "color_scheme": "background-1",
           "newsletter_enable": true,
-          "newsletter_heading": "Sign up to our emails",
+          "newsletter_heading": "",
           "show_social": false,
-          "enable_country_selector": true,
-          "enable_language_selector": true,
-          "payment_enable": true
+          "enable_country_selector": false,
+          "enable_language_selector": false,
+          "payment_enable": false
         }
       }
     },
