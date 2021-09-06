@@ -31,10 +31,73 @@
         "color_scheme": "background-1",
         "layout": "image_first"
       }
+    },
+    "1630958417e9d16e88": {
+      "type": "multicolumn-valores",
+      "blocks": {
+        "1630958417f43a4b85-0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Icono_para_las_propuestas_de_valor-26.png",
+            "title": "Compras Seguras",
+            "text": "<p>Nos aseguramos que ti pedido llegue a tu casa de forma segura<\/p>"
+          }
+        },
+        "1630958417f43a4b85-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Icono_para_las_propuestas_de_valor-28.png",
+            "title": "Gran Variedad de Productos",
+            "text": "<p>Nos esforzamos en ofrecer cada vez Más productos para que no tengas que buscar en otro sitio<\/p>"
+          }
+        },
+        "1630958417f43a4b85-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Iconografia_Pocket_Propuestas_de_Valor-37.png",
+            "title": "Metodos de Pagos Seguros",
+            "text": "<p>Nuetra plataforma ofrece diferentes metodos de pagos<\/p>"
+          }
+        },
+        "1630958417f43a4b85-3": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Icono_para_las_propuestas_de_valor-31.png",
+            "title": "Envíos Rápidos",
+            "text": "<p>Entregamos tu pedido en muy corto tiempo<\/p>"
+          }
+        },
+        "1630958417f43a4b85-4": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Iconografia_Pocket_Propuestas_de_Valor-38.png",
+            "title": "Atención Personalizada",
+            "text": "<p>Te brindamos el mejor servicio de atencion al cliente para aclarar todas tus dudas<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "1630958417f43a4b85-0",
+        "1630958417f43a4b85-1",
+        "1630958417f43a4b85-2",
+        "1630958417f43a4b85-3",
+        "1630958417f43a4b85-4"
+      ],
+      "settings": {
+        "title": "",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "swipe_on_mobile": false
+      }
     }
   },
   "order": [
     "main",
-    "1630699486bed83b33"
+    "1630699486bed83b33",
+    "1630958417e9d16e88"
   ]
 }
