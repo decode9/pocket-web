@@ -11,6 +11,68 @@
         "adapt_height_first_image": false
       }
     },
+    "1630940034cf49aa72": {
+      "type": "multicolumn-valores",
+      "blocks": {
+        "163094003465339571-0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Icono_para_las_propuestas_de_valor-26.png",
+            "title": "Compras Seguras",
+            "text": ""
+          }
+        },
+        "163094003465339571-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Icono_para_las_propuestas_de_valor-28.png",
+            "title": "Gran Variedad de Productos",
+            "text": ""
+          }
+        },
+        "163094003465339571-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Iconografia_Pocket_Propuestas_de_Valor-37.png",
+            "title": "Metodos de Pagos Seguros",
+            "text": ""
+          }
+        },
+        "163094003465339571-3": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Icono_para_las_propuestas_de_valor-31.png",
+            "title": "Envíos Rápidos",
+            "text": ""
+          }
+        },
+        "163094003465339571-4": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Iconografia_Pocket_Propuestas_de_Valor-38.png",
+            "title": "Atención Personalizada",
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "163094003465339571-0",
+        "163094003465339571-1",
+        "163094003465339571-2",
+        "163094003465339571-3",
+        "163094003465339571-4"
+      ],
+      "settings": {
+        "title": "",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "swipe_on_mobile": false
+      }
+    },
     "featured_products": {
       "type": "featured-collection",
       "settings": {
@@ -316,6 +378,7 @@
   },
   "order": [
     "16293170045db263e5",
+    "1630940034cf49aa72",
     "featured_products",
     "16306815841d71b05c",
     "1630606484fd78ef5d",
