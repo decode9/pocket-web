@@ -1,10 +1,40 @@
 {
   "sections": {
     "main": {
-      "type": "main-page"
+      "type": "main-page",
+      "settings": {
+      }
+    },
+    "1630699486bed83b33": {
+      "type": "image-with-text",
+      "blocks": {
+        "1630699486acea5ce2-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Tu sitio confiable de compras"
+          }
+        },
+        "1630699486acea5ce2-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Somos un Marketplace dedicado a llevar a los venezolanos la mayor cantidad de productos de calidad a un precio competitivo en un mismo lugar. En Pocket podrás realizar tu compra de forma simple y segura. Nosotros nos encargaremos de entregarlo de manera rápida y confiable an tu hogar.<\/p><p><\/p><p>Nos esforzamos diariamente en ofrecerte más productos, al mejor precio y en el menor tiempo posible. En Pocket buscamos ser sinónimo de excelencia y seguridad para que siempre tengas en quien confiar a la hora de buscar los productos de tanto necesitas. <\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "1630699486acea5ce2-0",
+        "1630699486acea5ce2-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Logo_Pocket-02.png",
+        "height": "adapt",
+        "color_scheme": "background-1",
+        "layout": "image_first"
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "1630699486bed83b33"
   ]
 }

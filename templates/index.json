@@ -1,60 +1,387 @@
 {
   "sections": {
-    "image_banner": {
-      "type": "image-banner",
+    "16293170045db263e5": {
+      "type": "image-banner-slider",
       "settings": {
-        "desktop_text_box_position": "flex-end"
-      },
+        "image": "shopify:\/\/shop_images\/close-up-of-motherboard.jpg",
+        "image_2": "shopify:\/\/shop_images\/easy-listening.jpg",
+        "desktop_text_box_position": "center",
+        "color_scheme": "background-1",
+        "stack_images_on_mobile": true,
+        "adapt_height_first_image": false
+      }
+    },
+    "1630940034cf49aa72": {
+      "type": "multicolumn-valores",
       "blocks": {
-        "heading": {
-          "type": "heading",
+        "163094003465339571-0": {
+          "type": "column",
           "settings": {
-            "heading": "Talk about your brand"
+            "image": "shopify:\/\/shop_images\/Icono_para_las_propuestas_de_valor-26.png",
+            "title": "Compras Seguras",
+            "text": ""
           }
         },
-        "button": {
-          "type": "buttons",
+        "163094003465339571-1": {
+          "type": "column",
           "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify:\/\/collections\/all",
-            "button_label_2": ""
+            "image": "shopify:\/\/shop_images\/Icono_para_las_propuestas_de_valor-28.png",
+            "title": "Gran Variedad de Productos",
+            "text": ""
+          }
+        },
+        "163094003465339571-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Iconografia_Pocket_Propuestas_de_Valor-37.png",
+            "title": "Metodos de Pagos Seguros",
+            "text": ""
+          }
+        },
+        "163094003465339571-3": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Icono_para_las_propuestas_de_valor-31.png",
+            "title": "Envíos Rápidos",
+            "text": ""
+          }
+        },
+        "163094003465339571-4": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Iconografia_Pocket_Propuestas_de_Valor-38.png",
+            "title": "Atención Personalizada",
+            "text": ""
           }
         }
       },
       "block_order": [
-        "heading",
-        "button"
-      ]
+        "163094003465339571-0",
+        "163094003465339571-1",
+        "163094003465339571-2",
+        "163094003465339571-3",
+        "163094003465339571-4"
+      ],
+      "settings": {
+        "title": "",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "swipe_on_mobile": false
+      }
     },
     "featured_products": {
       "type": "featured-collection",
       "settings": {
-        "title": "Featured products"
+        "title": "Ofertas",
+        "collection": "ofertas",
+        "products_to_show": 8,
+        "show_view_all": false,
+        "swipe_on_mobile": false,
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "add_image_padding": true,
+        "show_vendor": false
       }
     },
-    "image_text": {
-      "type": "image-with-text",
+    "16306815841d71b05c": {
+      "type": "image-banner",
       "blocks": {
-        "heading": {
-          "type": "heading"
-        },
-        "text": {
-          "type": "text"
-        },
-        "button": {
-          "type": "button"
+        "1630681584b9de3cbb-2": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Ver ofertas",
+            "button_link_1": "shopify:\/\/collections\/ofertas",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
         }
       },
       "block_order": [
-        "heading",
-        "text",
-        "button"
-      ]
+        "1630681584b9de3cbb-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Baner_y_tarjetas_gift_card_Pocket-06.png",
+        "desktop_text_box_position": "center",
+        "color_scheme": "background-1",
+        "stack_images_on_mobile": true,
+        "adapt_height_first_image": false
+      }
+    },
+    "1630606484fd78ef5d": {
+      "type": "multicolumn-categories",
+      "blocks": {
+        "1630606484fd78ef5d-0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Icono_Cocina-01.png",
+            "title": "",
+            "text": ""
+          }
+        },
+        "1630606484fd78ef5d-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Icono_Cuidado_Personal-01.png",
+            "title": "",
+            "text": ""
+          }
+        },
+        "1630606484fd78ef5d-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Icono_Bebes-01.png",
+            "title": "",
+            "text": ""
+          }
+        },
+        "e180dc5d-f341-4ff1-acc7-90dc1fcff81f": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Icono_Mascotas-01.png",
+            "title": "",
+            "text": ""
+          }
+        },
+        "4d5ec0a5-3695-4481-baa8-f63f309f6377": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Icono_Automotriz-01.png",
+            "title": "",
+            "text": ""
+          }
+        },
+        "7451d79e-b8f0-4b8d-9a86-3d702ea8c939": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Icono_Hogar-01.png",
+            "title": "",
+            "text": ""
+          }
+        },
+        "f337fbf1-187a-450b-80d4-7394a7cfbebc": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Icono_Entretenimiento-01.png",
+            "title": "",
+            "text": ""
+          }
+        },
+        "c771b77c-cf9a-4e74-9313-838ce0b10a2f": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Icono_Tecnologia-01.png",
+            "title": "",
+            "text": ""
+          }
+        },
+        "68def21d-e8ba-4232-8229-b5f691ceaf89": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Icono_Ferreteria-01.png",
+            "title": "",
+            "text": ""
+          }
+        },
+        "dc5e60eb-f976-4690-b746-0c14c5e98e12": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Icono_Camping-01.png",
+            "title": "",
+            "text": ""
+          }
+        },
+        "894a2fdb-98c9-4038-a233-ed5fff07110c": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Icono_Cocina-02.png",
+            "title": "",
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "1630606484fd78ef5d-0",
+        "1630606484fd78ef5d-1",
+        "1630606484fd78ef5d-2",
+        "e180dc5d-f341-4ff1-acc7-90dc1fcff81f",
+        "4d5ec0a5-3695-4481-baa8-f63f309f6377",
+        "7451d79e-b8f0-4b8d-9a86-3d702ea8c939",
+        "f337fbf1-187a-450b-80d4-7394a7cfbebc",
+        "c771b77c-cf9a-4e74-9313-838ce0b10a2f",
+        "68def21d-e8ba-4232-8229-b5f691ceaf89",
+        "dc5e60eb-f976-4690-b746-0c14c5e98e12",
+        "894a2fdb-98c9-4038-a233-ed5fff07110c"
+      ],
+      "settings": {
+        "title": "Categorias",
+        "image_width": "full",
+        "image_ratio": "square",
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "swipe_on_mobile": false
+      }
+    },
+    "16306878120d305c7b": {
+      "type": "multicolumn-marcas",
+      "blocks": {
+        "16306878120cd295ce-0": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": ""
+          }
+        },
+        "16306878120cd295ce-1": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": ""
+          }
+        },
+        "16306878120cd295ce-2": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": ""
+          }
+        },
+        "16306878120cd295ce-3": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": ""
+          }
+        },
+        "16306878120cd295ce-4": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": ""
+          }
+        },
+        "16306878120cd295ce-5": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": ""
+          }
+        },
+        "16306878120cd295ce-6": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": ""
+          }
+        },
+        "16306878120cd295ce-7": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": ""
+          }
+        },
+        "16306878120cd295ce-8": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": ""
+          }
+        },
+        "16306878120cd295ce-9": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": ""
+          }
+        },
+        "16306878120cd295ce-10": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": ""
+          }
+        },
+        "16306878120cd295ce-11": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": ""
+          }
+        },
+        "16306878120cd295ce-12": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": ""
+          }
+        },
+        "16306878120cd295ce-13": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": ""
+          }
+        },
+        "16306878120cd295ce-14": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": ""
+          }
+        },
+        "16306878120cd295ce-15": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "16306878120cd295ce-0",
+        "16306878120cd295ce-1",
+        "16306878120cd295ce-2",
+        "16306878120cd295ce-3",
+        "16306878120cd295ce-4",
+        "16306878120cd295ce-5",
+        "16306878120cd295ce-6",
+        "16306878120cd295ce-7",
+        "16306878120cd295ce-8",
+        "16306878120cd295ce-9",
+        "16306878120cd295ce-10",
+        "16306878120cd295ce-11",
+        "16306878120cd295ce-12",
+        "16306878120cd295ce-13",
+        "16306878120cd295ce-14",
+        "16306878120cd295ce-15"
+      ],
+      "settings": {
+        "title": "Marcas",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "swipe_on_mobile": false
+      }
     }
   },
   "order": [
-    "image_banner",
+    "16293170045db263e5",
+    "1630940034cf49aa72",
     "featured_products",
-    "image_text"
+    "16306815841d71b05c",
+    "1630606484fd78ef5d",
+    "16306878120d305c7b"
   ]
 }

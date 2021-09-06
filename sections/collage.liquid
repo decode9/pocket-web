@@ -20,7 +20,7 @@
       %}
       {%- case block.type -%}
         {%- when 'image' -%}
-          <div class="collage-card color-{{ block.settings.color_scheme }}{% if focus_card_left %} collage-card--left{% elsif focus_card_right %} collage-card--right{% endif %}" {{ block.shopify_attributes }}>
+          <div class="hola collage-card color-{{ block.settings.color_scheme }}{% if focus_card_left %} collage-card--left{% elsif focus_card_right %} collage-card--right{% endif %}" {{ block.shopify_attributes }}>
             <div class="collage-content collage-card__image-wrapper media media--transparent{% if block.settings.image_padding %} collage-card-spacing{% endif %}">
               {%- if block.settings.image != blank -%}
                 <img srcset="{%- if block.settings.image.width >= 500 -%}{{ block.settings.image | img_url: '500x' }} 500w,{%- endif -%}

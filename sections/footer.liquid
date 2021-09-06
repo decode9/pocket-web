@@ -29,12 +29,16 @@
             assign footer_grid_class = 'grid--3-col-tablet'
           endif
         -%}
-        <div class="footer__blocks-wrapper grid grid--1-col grid--2-col grid--4-col-tablet {{ footer_grid_class }}">
+        <div class="footer__blocks-wrapper grid grid--1-col grid--2-col grid--4-col-tablet footer-content-left {{ footer_grid_class }}">
+            <img
+              src="https://cdn.shopify.com/s/files/1/0586/1621/7787/files/Logo_Pocket-02.png?v=1628192313"
+              loading="lazy"
+              class="footer_logo"
+              alt="{{ section.settings.logo.alt | default: shop.name | escape }}"
+            >
           {%- for block in section.blocks -%}
             {%- if block.type == 'link_list' and block.settings.heading != blank -%}
               <div class="accordion" {{ block.shopify_attributes }}>
-                <details>
-                  <summary><h2 class="h4 accordion__title">{{ block.settings.heading | escape }}</h2>{% render 'icon-caret' %}</summary>
                   {%- if block.settings.menu != blank -%}
                     <ul class="footer-block__details-content list-unstyled">
                       {%- for link in block.settings.menu.links -%}
@@ -46,15 +50,11 @@
                       {%- endfor -%}
                     </ul>
                   {%- endif -%}
-                </details>
               </div>
             {%- endif -%}
 
             <div class="footer-block grid__item{% if block.type == 'link_list' and block.settings.heading != blank %} footer-block--menu small-hide{% endif %}" {{ block.shopify_attributes }}>
-              {%- if block.settings.heading != blank -%}
-                <h2 class="footer-block__heading">{{- block.settings.heading | escape -}}</h2>
-              {%- endif -%}
-
+              
               {%- case block.type -%}
                 {%- when 'text' -%}
                   <div class="footer-block__details-content rte">
@@ -65,7 +65,7 @@
                     <ul class="footer-block__details-content list-unstyled">
                       {%- for link in block.settings.menu.links -%}
                         <li>
-                          <a href="{{ link.url }}" class="link link--text list-menu__item list-menu__item--link{% if link.active %} list-menu__item--active{% endif %}">
+                          <a href="{{ link.url }}" class="link link--text list-menu__item list-menu__item--link">
                             {{ link.title }}
                           </a>
                         </li>
@@ -96,6 +96,12 @@
       {%- endif -%}
 
       <div class="footer-block--newsletter">
+        <div class="footer-p-suscribe">
+          <span>¡No te pierdas nada!</span>
+          <p>
+            Entérate de nuestros descuentos, promociones y de la llegada de nuevos productos
+          </p>
+        </div>
         {%- if section.settings.newsletter_enable -%}
           <div class="footer-block__newsletter">
             {%- if section.settings.newsletter_heading != blank -%}
@@ -125,16 +131,13 @@
                     placeholder="{{ 'newsletter.label' | t }}"
                     required
                   >
-                  <label class="field__label" for="NewsletterForm--{{ section.id }}">
-                    {{ 'newsletter.label' | t }}
-                  </label>
                 </div>
                 {%- if form.errors -%}
                   <small class="newsletter-form__message form__message" id="ContactFooter-error">{% render 'icon-error' %}{{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}</small>
                 {%- endif -%}
               </div>
-              <button type="submit" class="button button--secondary newsletter-form__button" name="commit" id="Subscribe">
-                {{ 'newsletter.button_label' | t }}
+              <button type="submit" class="search__button field__button focus-inset" name="commit" id="Subscribe">
+                >
               </button>
               {%- if form.posted_successfully? -%}
                 <h3 class="newsletter-form__message newsletter-form__message--success form__message" id="ContactFooter-success" tabindex="-1" autofocus>{% render 'icon-success' %}{{ 'newsletter.success' | t }}</h3>
