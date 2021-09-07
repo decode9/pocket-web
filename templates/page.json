@@ -93,11 +93,56 @@
         "button_link": "",
         "swipe_on_mobile": false
       }
+    },
+    "1631034377a9979719": {
+      "type": "multicolumn-team",
+      "blocks": {
+        "16310343776b9da926-0": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "item_link": "",
+            "text": ""
+          }
+        },
+        "16310343776b9da926-1": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "item_link": "",
+            "text": ""
+          }
+        },
+        "16310343776b9da926-2": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "item_link": "",
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "16310343776b9da926-0",
+        "16310343776b9da926-1",
+        "16310343776b9da926-2"
+      ],
+      "settings": {
+        "title": "Nuestro Equipo",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "swipe_on_mobile": false
+      }
     }
   },
   "order": [
     "main",
     "1630699486bed83b33",
-    "1630958417e9d16e88"
+    "1630958417e9d16e88",
+    "1631034377a9979719"
   ]
 }
