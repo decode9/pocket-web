@@ -57,6 +57,9 @@
   --alpha-button-background: 1;
   --alpha-button-border: 1;
 }
+.page-title{
+  display: none;
+}
 
 .color-background-2,
 .color-inverse,
