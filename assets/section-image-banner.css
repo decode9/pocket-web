@@ -44,6 +44,9 @@
   align-items: center;
   justify-content: center;
 }
+.collection > .glider-slide {
+  width: 33% !important;
+}
 .glider-dots {
   position: absolute;
   bottom: 0px;
@@ -53,15 +56,15 @@
   right: 0px;
 }
 
-.glider-dot{
+.glider-dot {
   color: #f5be0b;
-  background-color: #f5be0b;
+  background: #f5be0b;
   opacity: 0.5;
 }
 
-.glider-dot.active{
+.glider-dot.active {
   color: #f5be0b;
-  background-color: #f5be0b;
+  background: #f5be0b;
   opacity: 1;
 }
 @media screen and (max-width: 989px) {
@@ -87,7 +90,7 @@
   }
 }
 
-.banner{
+.banner {
   width: 100%;
   height: 100%;
   margin: 5rem 0;
