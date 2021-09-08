@@ -83,6 +83,8 @@
   height: 100%;
   justify-content: center;
   padding: 4rem 4rem 5rem;
+  line-height: 138%;
+  font-size: 2rem;
 }
 
 @media screen and (min-width: 750px) {
@@ -128,4 +130,14 @@
 .image-with-text__text p {
   margin-top: 0;
   margin-bottom: 1rem;
+}
+.image-with-text__media img{
+  background-color: #000;
+}
+.image-with-text__media{
+  display: flex;
+  align-items: center;
+}
+.imagen-container{
+  width: 40%;
 }
