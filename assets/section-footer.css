@@ -563,3 +563,34 @@ footer details[open] summary ~ * {
     padding: 0;
   }
 }
+.socialnav{
+  position: fixed;
+  top: 45%;
+  right: 0;
+  background-color: #f5be0b;
+  width: 3%;
+  color:  #000;
+}
+.list-socialnav{
+  list-style: none;
+  padding: 16%;
+  margin: 0;
+}
+.list-social-item img{
+  width: 100%;
+}
+.socialmenu{
+  display:  none !important;
+}
+.socialmenu-icon{
+  display:  block ;
+  width:  100%;
+  cursor: pointer;
+}
+.fa-ellipsis-h{
+  width:  100%;
+  height:   auto ;
+}
+#click:checked ~ul{
+  max-height:0;
+}
