@@ -9,17 +9,8 @@
   display: none;
 }
 
-@media screen and (max-width: 749px) {
-  .multicolumn.no-heading.background-secondary {
-    padding-top: 5rem;
-  }
-}
 
-@media screen and (min-width: 750px) {
-  .multicolumn.no-heading:not(.background-secondary) {
-    margin-top: 6rem;
-  }
-}
+
 
 .multicolumn.background-secondary .title-wrapper-with-link {
   margin-top: 0;
@@ -79,7 +70,7 @@
 }
 
 .multicolumn:not(.background-secondary) {
-  margin: 5rem 0;
+  margin:0;
 }
 
 .multicolumn-list h3,
@@ -302,7 +293,7 @@
   padding: 0;
   list-style: none;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   width: 100%;
 }
 .valores-list img{
@@ -312,10 +303,62 @@
   min-height: 100px;
 }
 .valores-card{
- min-height: 200px;
+  min-height: 200px;
 }
 .valores-item{
   padding: 1.5%;
   width: 17%;
   text-align: center;
+}
+.valores-item p{
+  text-align: start;
+  line-height: 131%;
+}
+
+.team-list{
+  display: flex;
+  padding: 0;
+  list-style: none;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+}
+.team-list img{
+  object-fit: contain;
+  width: 200px;
+  height: 300px;
+}
+.team-card{
+  min-height: 200px;
+  align-items: center;
+  position: relative;
+}
+.team-item{
+  padding: 1.5%;
+  width: 30%;
+  text-align: center;
+  text-decoration: none;
+}
+.team-item p{
+  text-align: start;
+  line-height: 131%;
+}
+.team-placeholder{
+  background-color: #d0d0d0;
+  width: 200px;
+  height: 300px;
+}
+.item-link{
+  text-decoration: none;
+  color: #000;
+}
+.team-images-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon-in{
+  position: absolute;
+  top: 10px;
+  right: 70px;
 }
