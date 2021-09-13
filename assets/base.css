@@ -1,4 +1,18 @@
 /* Color custom properties */
+@font-face {
+  font-family: 'AvenirBlack';
+  src: url('/assets/AvenirLTStd-Black.otf');
+}
+
+@font-face {
+  font-family: 'AvenirBook';
+  src: url('/assets/AvenirLTStd-Book.otf');
+}
+
+@font-face {
+  font-family: 'AvenirRoman';
+  src: url('/assets/AvenirLTStd-Roman.otf');
+}
 
 :root,
 .color-background-1 {
@@ -57,7 +71,7 @@
   --alpha-button-background: 1;
   --alpha-button-border: 1;
 }
-.page-title{
+.page-title {
   display: none;
 }
 
@@ -191,7 +205,6 @@ html.no-js .no-js-hidden {
 .element-margin {
   margin-top: 5rem;
 }
-
 
 .spaced-section--full-width + .spaced-section--full-width {
   margin-top: 0;
@@ -1260,7 +1273,8 @@ deferred-media {
 
 .field__label,
 .customer .field label {
-  font-size: 1.6rem;
+  font-family: 'AvenirBook';
+  font-size: 1.2rem;
   left: 2rem;
   top: 1rem;
   margin-bottom: 0;
@@ -2074,7 +2088,7 @@ details-disclosure > details {
 
 .productContainer {
   width: 21%;
-  height: 400px;
+  height: 300px;
   margin: 2%;
   box-sizing: border-box;
   display: flex;
@@ -2084,7 +2098,7 @@ details-disclosure > details {
 }
 .imageContainer {
   width: 100%;
-  height: 50%;
+  height: 60%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2099,7 +2113,8 @@ details-disclosure > details {
 }
 
 .productInfo {
-  height: 50%;
+  width: 100%;
+  height: 40%;
   box-sizing: border-box;
   padding: 5%;
   display: flex;
@@ -2145,6 +2160,7 @@ details-disclosure > details {
   height: max-content;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .productButton {
@@ -2170,6 +2186,7 @@ details-disclosure > details {
 }
 
 .collectionSort {
+  margin-top: 20px;
   margin-bottom: 20px;
 }
 .sortSelect {
@@ -2284,6 +2301,7 @@ details-disclosure > details {
 .slider-desktop {
   display: none;
 }
+
 @media screen and (min-width: 990px) {
   .slider-mobile {
     display: none;
@@ -2356,4 +2374,87 @@ details-disclosure > details {
 .motion-reduce {
   max-width: 100%;
   max-height: 100%;
+}
+
+.linkContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 1rem;
+}
+
+.linkBox {
+  border: 2px solid #f5be0b;
+  width: 20px;
+  height: 20px;
+  margin-right: 15px;
+}
+
+.linkBoxFull {
+  background-color: #f5be0b;
+}
+
+.linkTitle {
+  color: black;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.collectionHeader {
+  padding: 0 45px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.collectionMainTitle {
+  font-size: 30px;
+  text-transform: capitalize;
+  font-family: 'AvenirBook';
+}
+
+.deployFilters {
+  cursor: pointer;
+  display: none;
+}
+
+@media screen and (max-width: 990px) {
+  .deployFilters {
+    display: block;
+  }
+  .collectionFilters {
+    display: none;
+    width: 0px;
+    transition: all 1s;
+  }
+  .productContainer {
+    width: 46%;
+  }
+  #MainContent {
+    padding-top: 141px;
+  }
+  .collectionFiltersResponsive {
+    display: block;
+    position: fixed;
+    width: 300px;
+    transition: all 1s;
+    z-index: 2;
+    height: calc(100vh - 141px);
+    overflow-y: auto;
+  }
+  .slider-mobile {
+    display: none;
+  }
+  .slider-desktop {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  #MainContent {
+    padding-top: 130px;
+  }
 }

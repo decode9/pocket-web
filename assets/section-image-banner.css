@@ -67,12 +67,6 @@
   background: #f5be0b;
   opacity: 1;
 }
-@media screen and (max-width: 989px) {
-  .slider-container {
-    margin-top: 120px;
-  }
-}
-
 .banner__content {
   position: relative;
 }
@@ -95,6 +89,15 @@
   height: 100%;
   margin: 5rem 0;
 }
+
+
+@media screen and (max-width: 989px) {
+  .slider-container {
+    margin-top: 0;
+    height: 300px;
+  }
+}
+
 
 /*.banner {
   display: flex;
