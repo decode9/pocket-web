@@ -563,3 +563,56 @@ footer details[open] summary ~ * {
     padding: 0;
   }
 }
+.socialnav {
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+  width: 15%;
+  color:  #000;
+}
+.list-socialnav{
+  display: none;
+  list-style: none;
+  padding: 16%;
+  margin-bottom: 115%;
+  background-color: #f5be0b;
+}
+.list-social-item img{
+  width: 100%;
+}
+.socialmenu{
+  display:  none !important;
+}
+.socialmenu-icon{
+  display:  block ;
+  width:  100%;
+  cursor: pointer;
+  position: absolute;
+  bottom: 0;
+  background-color: #f5be0b;
+  text-align: center;
+  border-radius: 100%;
+  font-size: 280%;
+  letter-spacing: -0.2rem;
+  line-height: 130.952%;
+}
+.fa-ellipsis-h{
+  width:  100%;
+  height:   auto;
+}
+.socialnav #menuclick:checked ~ .list-socialnav {
+  display: block;
+}
+@media screen and (min-width: 990px){
+  .socialnav{
+    width: 3%;
+    right: 0;
+    bottom: 40%;
+  }
+  .socialmenu-icon{
+    display: none;
+  }
+  .list-socialnav{
+    display: block;
+  }
+}
