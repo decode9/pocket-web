@@ -54,7 +54,6 @@
     </div>
   {%- endif -%}
   <div class="banner__content page-width" style="align-items: {{ section.settings.desktop_text_box_position }};">
-<<<<<<< HEAD
     <div class="banner__box ">
       {%- for block in section.blocks -%}
         {%- case block.type -%}
@@ -78,18 +77,6 @@
   </div>
 </div>
 </a>
-
-=======
-    
-  </div>
-</div>
-{%- for block in section.blocks -%}
-  {%- case block.type -%}
-    {%- when 'buttons' -%}
-      </a>
-  {%- endcase -%}
-{%- endfor -%}
->>>>>>> d23a81c7fc37f5d217b3e62f787b9ce9d926680e
 {% schema %}
 {
   "name": "t:sections.image-banner.name",
