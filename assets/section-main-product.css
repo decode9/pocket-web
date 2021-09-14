@@ -218,6 +218,7 @@ fieldset.product-form__input .form__label {
 }
 
 .product__text {
+  display: none;
   margin-bottom: 0;
 }
 
@@ -428,6 +429,7 @@ a.product__text {
 .product__media-item > * {
   display: block;
   position: relative;
+  padding-top: 45%;
 }
 
 .product__media-toggle {
@@ -517,7 +519,7 @@ a.product__text {
 }
 
 .product-media-modal__toggle {
-  background-color: rgb(var(--color-background));
+  background-color: transparent;
   border: 0.1rem solid rgba(var(--color-foreground), 0.1);
   border-radius: 50%;
   color: rgba(var(--color-foreground), 0.55);
@@ -750,3 +752,4 @@ a.product__text {
   margin: 0;
   width: 2.2rem;
 }
+
