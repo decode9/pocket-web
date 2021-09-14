@@ -389,7 +389,7 @@
       </details-modal>
         {% if customer==False %}
           <a href="{{ routes.account_register_url }}" class="header__icon--account link link--text focus-inset register_p">
-              <p class="register_p">Crear cuanta</p>
+              <p class="register_p">Crear cuenta</p>
           </a>
         {% endif %}
         <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}" class="header__icon--account link link--text focus-inset login_p">

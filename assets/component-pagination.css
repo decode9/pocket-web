@@ -94,6 +94,8 @@ a.pagination__item:hover::after {
 
 .pagination__item-arrow {
   color: rgba(var(--color-foreground), 0.75);
+  border: 1px solid black;
+  border-radius: 100%;
 }
 
 .pagination__item-arrow:hover .icon {
