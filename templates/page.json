@@ -91,7 +91,7 @@
         "background_style": "primary",
         "button_label": "",
         "button_link": "",
-        "swipe_on_mobile": false
+        "swipe_on_mobile": true
       }
     },
     "1631034377a9979719": {
