@@ -70,6 +70,67 @@
         {%- endfor -%}
       </ul>
     </slider-component>
+    <slider-component class="slider-mobile">
+      <ul class="team-list-slider"
+        id="Slider-{{ section.id }}"
+        role="list"
+      >
+        {%- liquid
+          assign highest_ratio = 0
+          for block in section.blocks
+            if block.settings.image.aspect_ratio > highest_ratio
+              assign highest_ratio = block.settings.image.aspect_ratio
+            endif
+          endfor
+        -%}
+        {%- for block in section.blocks -%}
+          <li class="team-item" {{ block.shopify_attributes }}>
+            <a class="item-link" href="{{ block.settings.item_link }}">
+              <div class="team-card">
+                <i class="fab fa-linkedin-in icon-in"></i>
+                {%- if block.settings.image == blank -%}
+                <div class="team-images-container">
+                  <div class="team-placeholder"></div>
+                </div>
+                {% endif %}
+                {%- if block.settings.image != blank -%}
+                  {% if section.settings.image_ratio == 'adapt' or section.settings.image_ratio == 'circle' %}
+                    {% assign spaced_image = true %}
+                  {% endif %}
+                  <div class="">
+                    <div class="team-images-container">
+                      <img
+                        srcset="{%- if block.settings.image.width >= 275 -%}{{ block.settings.image | img_url: '275x' }} 275w,{%- endif -%}
+                          {%- if block.settings.image.width >= 550 -%}{{ block.settings.image | img_url: '550x' }} 550w,{%- endif -%}
+                          {%- if block.settings.image.width >= 710 -%}{{ block.settings.image | img_url: '710x' }} 710w,{%- endif -%}
+                          {%- if block.settings.image.width >= 1420 -%}{{ block.settings.image | img_url: '1420x' }} 1420w,{%- endif -%}"
+                        src="{{ block.settings.image | img_url: '550x' }}"
+                        sizes="(min-width: 990px) {% if section.blocks.size <= 2 %}710px{% else %}550px{% endif %},
+                          (min-width: 750px) {% if section.blocks.size == 1 %}710px{% else %}550px{% endif %},
+                          calc(100vw - 30px)"
+                        alt="{{ block.settings.title }}"
+                        loading="lazy"
+                      >
+                    </div>
+                  </div>
+                {%- endif -%}
+                <div class="team-card__info">
+                  {%- if block.settings.title == blank -%}
+                    <h3>Nombres</h3>
+                  {%- endif -%}
+                  {%- if block.settings.title != blank -%}
+                    <h3>{{ block.settings.title | escape }}</h3>
+                  {%- endif -%}
+                  {%- if block.settings.text != blank -%}
+                    <div class="rte">{{ block.settings.text }}</div>
+                  {%- endif -%}
+                </div>
+              </div>
+            </a>
+          </li>
+        {%- endfor -%}
+      </ul>
+    </slider-component>
   </div>
 </div>
 

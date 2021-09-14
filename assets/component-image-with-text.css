@@ -141,3 +141,38 @@
 .imagen-container{
   width: 40%;
 }
+
+@media screen and (max-width: 989px){
+
+  /* component-image-with-text.css | http://127.0.0.1:9292/assets/component-image-with-text.css?v=17088832233305839052 */
+
+  .imagen-container {
+    /* width: 40%; */
+    width: 100%;
+  }
+
+  .image-with-text {
+    /* margin-top: 5rem; */
+    margin-top: 14rem;
+    padding: 0 7%;
+  }
+
+  .image-with-text__content {
+    padding: 4% 0;
+  }
+
+  /* Elemento | http://127.0.0.1:9292/pages/quienes-somos */
+
+  .image-with-text__heading {
+    font-size: 2.2rem;
+  }
+
+  /* Elemento | http://127.0.0.1:9292/pages/quienes-somos */
+
+  .image-with-text__text {
+    font-size: 17px;
+    letter-spacing: -0.24px;
+    line-height: 25px;
+  }
+
+}
