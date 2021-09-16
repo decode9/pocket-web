@@ -1,5 +1,5 @@
 .product {
-  margin: 0;
+  margin: 5%;
 }
 
 .product--no-media {
@@ -40,14 +40,14 @@
 
 @media screen and (min-width: 990px) {
   .product:not(.product--no-media) .product__media-wrapper {
-    max-width: 64%;
-    width: calc(64% - 1rem / 2);
+    max-width: 55%;
+    width: 55%;
   }
 
   .product:not(.product--no-media) .product__info-wrapper {
     padding-left: 4rem;
-    max-width: 36%;
     width: calc(36% - 1rem / 2);
+    height: 850px;
   }
 }
 
@@ -104,7 +104,7 @@
 
 /* Form Elements */
 .product-form__input {
-  flex: 0 0 100%;
+  /*flex: 0 0 100%;*/
   padding: 0;
   margin: 0 0 1.2rem 0;
   max-width: 37rem;
@@ -158,8 +158,8 @@ fieldset.product-form__input .form__label {
 }
 
 .product-form__input input[type='radio']:checked + label {
-  background-color: rgb(var(--color-foreground));
-  color: rgb(var(--color-background));
+  background-color: #f5be0b;
+  color: #000;
 }
 
 .product-form__input input[type='radio']:disabled + label {
@@ -215,6 +215,8 @@ fieldset.product-form__input .form__label {
 .product__info-container .product__description,
 .product__info-container .share-button {
   margin: 2.5rem 0;
+  font-weight: lighter;
+  margin: 0;
 }
 
 .product__text {
@@ -249,7 +251,7 @@ a.product__text {
   padding: 0 1rem;
 }
 
-.product .price {
+.product {
   align-items: flex-start;
 }
 
@@ -753,3 +755,59 @@ a.product__text {
   width: 2.2rem;
 }
 
+.product-form__quantity{
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+}
+.quantity__button{
+  background-color: #d0d2d3;
+  color: #000;
+}
+.price-container{
+  display: flex;
+  margin: 0;
+  width: 45%;
+  background-color: #f1f1f1;
+}
+.price-quantity{
+  margin: 0;
+  margin-bottom: 5%;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+  text-align: center;
+}
+.product-form__buttons button{
+  background-color: #f5be0b;
+  color: #000;
+}
+.shopify-cleanslate button, .product-form__submit{
+  border: none;
+  padding: 1%;
+  height: 5%;
+}
+@media screen and (min-width: 990px){
+  .product__media-item > * {
+    padding-top: 8%;
+  }
+  .product__info-wrapper{
+    padding-top: 8%;
+    background-color: #f2f2f2;
+    padding: 8% 5%;
+  }
+  .price-quantity {
+    flex-direction: column;
+    width: 45%;
+  }
+  .product-form-container{
+    width: 45%;
+  }
+  .price-buy-buttons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

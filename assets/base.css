@@ -1142,6 +1142,8 @@ deferred-media {
 .button--full-width {
   display: flex;
   width: 100%;
+  background-color: #f5be0b;
+  color: #000;
 }
 
 .button.loading {
