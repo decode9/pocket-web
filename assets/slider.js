@@ -87,4 +87,16 @@ window.addEventListener('load',function (){
       draggable: true,
     })
   }
+  if (document.querySelector('.recommendation-list') !== null){
+    new Glider(document.querySelector('.recommendation-list'), {
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      draggable: true,
+      rewind:true,
+      arrows: {
+        prev: '.slider-prev-recommendation',
+        next: '.slider-next-recommendation'
+      }
+    })
+  }
 })
