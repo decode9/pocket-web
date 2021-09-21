@@ -1,13 +1,17 @@
 .customer:not(.account, .order) {
-  margin: 6rem auto 9rem;
-  max-width: 33.4rem;
-  padding: 0 1.5rem;
+  margin: 45% 0;
+  padding: 0 10%;
   text-align: center;
 }
-
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 990px) {
   .customer:not(.account, .order) {
-    max-width: 47.8rem;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    margin: 10% auto 0 auto;
+    box-shadow: 2px 2px 3px #000;
+    align-content: center;
+    padding: 0 5%;;
   }
 }
 
@@ -16,7 +20,10 @@
 }
 
 .customer button {
-  margin: 4rem 0 1.5rem;
+  margin: 1rem 0 1.5rem;
+  background-color: #f5be0b;
+  box-shadow: none;
+  width: 100%;
 }
 
 .customer ul {
@@ -46,7 +53,7 @@
 }
 
 .customer .field {
-  margin: 2rem 0 0 0;
+  margin: 1rem 0 0 0;
 }
 
 .customer .field:first-of-type {
@@ -310,7 +317,10 @@
 /* Login */
 .login a {
   display: block;
-  margin: 0 auto;
+  margin: 1rem auto;
+  text-decoration: none;
+  color: #555;
+  font-size: 1.7rem;
   width: fit-content;
 }
 
@@ -727,4 +737,7 @@ li[data-address] > h2 {
 .addresses form > div:nth-of-type(7),
 .addresses form > div:nth-of-type(7) + div[id] {
   margin-top: 1.5rem;
+}
+.field input{
+  background-color: #f2f2f1;
 }
