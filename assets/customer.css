@@ -247,6 +247,19 @@
     width: 100%;
   }
 }
+.customer thead,
+.customer th,
+.customer tfoot td:first-of-type {
+  display: none;
+}
+.customer td::before {
+  content: attr(data-label);
+  padding-right: 2rem;
+  text-transform: uppercase;
+  flex-grow: 1;
+  text-align: left;
+}
+
 
 /* Pagination */
 .customer .pagination {
@@ -466,8 +479,10 @@
 }
 
 .account table td:first-of-type a {
-  padding: 1.1rem 1.5rem;
   text-decoration: none;
+}
+/*
+  padding: 1.1rem 1.5rem;
   box-shadow: 0 0 0 0.1rem rgba(var(--color-link), 0.2);
   font-size: 1.2rem;
 }
@@ -475,7 +490,7 @@
 .account table td:first-of-type a:hover {
   box-shadow: 0 0 0 0.2rem rgba(var(--color-link), 0.2);
   color: rgb(var(--color-link));
-}
+}*/
 
 .order td:first-of-type {
   align-items: initial;
@@ -740,4 +755,10 @@ li[data-address] > h2 {
 }
 .field input{
   background-color: #f2f2f1;
+}
+.user-details{
+  margin-top: 40%;
+}
+.order-item{
+  background-color: #f1f1f2;
 }
