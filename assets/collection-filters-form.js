@@ -115,6 +115,7 @@ class CollectionFiltersForm extends HTMLElement {
     const mobileElementSelectors = ['.mobile-facets__open', '.mobile-facets__count'];
 
     mobileElementSelectors.forEach((selector) => {
+      console.log(selector)
       document.querySelector(selector).innerHTML = html.querySelector(selector).innerHTML;
     });
 
@@ -122,7 +123,7 @@ class CollectionFiltersForm extends HTMLElement {
   }
 
   renderCounts(source, target) {
-    const countElementSelectors = ['.count-bubble','.facets__selected'];
+    const countElementSelectors = ['.count-bubble', '.facets__selected'];
     countElementSelectors.forEach((selector) => {
       const targetElement = target.querySelector(selector);
       const sourceElement = source.querySelector(selector);

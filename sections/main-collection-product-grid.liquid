@@ -248,9 +248,9 @@
         <p class="collection-product-count light" role="status">
           {{ 'sections.collection_template.product_count' | t: product_count: collection.products_count, count: collection.all_products_count }}
         </p>
-
-        <div id="main-collection-product-grid" data-id="{{ section.id }}" class="productContent">
-          {%- for product in collection.products -%}
+        <div id="main-collection-product-grid" >
+          <div id="product-grid" data-id="{{ section.id }}" class="productContent">
+            {%- for product in collection.products -%}
             
               {% render 'product-card',
                 product_card_product: product,
@@ -260,9 +260,9 @@
                 show_vendor: section.settings.show_vendor
               %}
             
-          {%- endfor -%}
+            {%- endfor -%}
+          </div>
         </div>
-
         {%- if paginate.pages > 1 -%}
           {% render 'pagination', paginate: paginate, anchor: '', class: '' %}
         {%- endif -%}
