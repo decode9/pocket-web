@@ -11,8 +11,8 @@
     Usage:
     {% render 'product-card', show_vendor: section.settings.show_vendor %}
 {% endcomment %}
+<a href="{{ product_card_product.url | default: '#' }}" class="productContainer full-unstyled-link">
 
-<div class="productContainer">
   <div class="imageContainer">
     {%- if product_card_product.featured_media -%}
       {%- liquid
@@ -63,9 +63,6 @@
     {% comment %} <div class="productDescription">{{ product_card_product.description }}</div> {% endcomment %}
     <div class="productSales">
       {% render 'price', product: product_card_product, price_class: '' %}
-      <button class="productButton">
-        Ver
-      </button>
     </div>
   </div>
-</div>
+</a>

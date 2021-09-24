@@ -2086,9 +2086,17 @@ details-disclosure > details {
   flex-wrap: wrap;
 }
 
+
+.searchContainer {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .productContainer {
   width: 21%;
-  height: 300px;
+  height: 250px;
   margin: 2%;
   box-sizing: border-box;
   display: flex;
@@ -2098,7 +2106,7 @@ details-disclosure > details {
 }
 .imageContainer {
   width: 100%;
-  height: 60%;
+  height: 80%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2114,19 +2122,21 @@ details-disclosure > details {
 
 .productInfo {
   width: 100%;
-  height: 40%;
+  height: 20%;
   box-sizing: border-box;
-  padding: 5%;
+  padding: 0 5%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: #f1f1f2;
 }
-
+.CategoryTitle {
+  font-family: 'AvenirRoman';
+}
 .productTitle {
   font-size: 15px;
   margin: 0;
   font-weight: 600;
+  font-family: 'AvenirBlack';
 }
 
 .productDescription {
@@ -2193,6 +2203,7 @@ details-disclosure > details {
   background: transparent;
   border: 2px solid #f5be0b;
   cursor: pointer;
+  font-family: 'AvenirRoman';
 }
 .collectionFilterBox {
   width: 100%;
@@ -2203,8 +2214,17 @@ details-disclosure > details {
   border: 2px solid #f5be0b;
   padding: 0.9rem !important;
   margin: 10px 0;
+  font-family: 'AvenirRoman';
 }
-
+.priceFilterSummary{
+  margin-bottom: 20px;
+}
+.field__currency{
+  font-family: 'AvenirRoman';
+}
+.filterLabel {
+  font-family: 'AvenirRoman';
+}
 .maxFilterLabel {
   font-size: 12px;
 }
@@ -2235,7 +2255,6 @@ details-disclosure > details {
 
 #MainContent {
   padding-top: 83px;
-  padding-bottom: 50px;
 }
 
 /* collection */
@@ -2385,6 +2404,7 @@ details-disclosure > details {
   align-items: center;
   justify-content: flex-start;
   margin-bottom: 1rem;
+  font-family: 'AvenirRoman';
 }
 
 .linkBox {
@@ -2417,7 +2437,7 @@ a {
 .collectionMainTitle {
   font-size: 30px;
   text-transform: capitalize;
-  font-family: 'AvenirBook';
+  font-family: 'AvenirBlack';
 }
 
 .deployFilters {
@@ -2426,7 +2446,7 @@ a {
 }
 
 @media screen and (max-width: 990px) {
-  .ofertTitle{
+  .ofertTitle {
     margin-top: 40px;
   }
   .deployFilters {
