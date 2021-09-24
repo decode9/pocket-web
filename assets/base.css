@@ -2086,6 +2086,14 @@ details-disclosure > details {
   flex-wrap: wrap;
 }
 
+
+.searchContainer {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .productContainer {
   width: 21%;
   height: 250px;
