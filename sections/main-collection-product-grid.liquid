@@ -108,14 +108,13 @@
                 <div class="priceFilterSummary" open="true">
                   <summary class="">
                     <div>
-                      <span>{{ filter.label | escape }}</span>
+                      <span class='filterLabel'>{{ filter.label | escape }}</span>
                     </div>
                   </summary>
                   <div class="displayPriceFilter">
                     <div class="maxFilter">
                       {%- assign max_price_amount = filter.range_max | money | escape -%}
                       <p class="maxFilterLabel">{{ "sections.collection_template.max_price" | t: price: max_price_amount }}</p>
-                      <a href="{{ filter.url_to_remove }}" class="resetFilter" >{{ 'sections.collection_template.reset' | t }}</a>
                     </div>
                     <price-range class="priceRange">
                       <div class="field priceData">
@@ -157,6 +156,7 @@
                       </div>
                     </div>
                   </price-range>
+                  <a href="{{ filter.url_to_remove }}" class="resetFilter" >{{ 'sections.collection_template.reset' | t }}</a>
                 </div>
               {% endcase %}
             {%- endfor -%}
@@ -224,9 +224,9 @@
           </div>
         </div>
 
-        <p class="collection-product-count light" role="status">
+     {% comment %}    <p class="collection-product-count light" role="status">
           {{ 'sections.collection_template.product_count' | t: product_count: collection.products_count, count: collection.all_products_count }}
-        </p>
+        </p> {% endcomment %}
 
         <div class="title-wrapper center">
           <h2 class="title title--primary">
@@ -244,10 +244,10 @@
             </svg>
           </div>
         </div>
-
+{% comment %} 
         <p class="collection-product-count light" role="status">
           {{ 'sections.collection_template.product_count' | t: product_count: collection.products_count, count: collection.all_products_count }}
-        </p>
+        </p> {% endcomment %}
         <div id="main-collection-product-grid" >
           <div id="product-grid" data-id="{{ section.id }}" class="productContent">
             {%- for product in collection.products -%}
