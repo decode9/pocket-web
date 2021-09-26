@@ -1,7 +1,7 @@
 .footer {
   background-color: #000;
   color: #f5be0b;
-  padding: 4% 6% ;
+  padding: 4% 6%;
 }
 
 .footer:not(.color-background-1) {
@@ -28,8 +28,6 @@
 .footer__content-top {
   display: block;
 }
-
-
 
 .footer__content-bottom {
   border-top: solid 0.1rem rgba(var(--color-foreground), 0.2);
@@ -62,7 +60,6 @@
 .footer__localization:empty + .footer__column--info {
   align-items: center;
 }
-
 
 .footer__column {
   width: 100%;
@@ -523,96 +520,101 @@ footer details[open] summary ~ * {
   text-decoration: underline;
 }
 
-.footer_logo{
+.footer_logo {
   width: 40%;
 }
-.footer-p-suscribe{
+.footer-p-suscribe {
   border-top: 1px solid #f5be0b;
   color: #fff;
 }
-.footer-p-suscribe span{
+.footer-p-suscribe span {
   color: #f5be0b;
 }
 
 @media screen and (min-width: 750px) {
-  .footer{
+  .footer {
     padding: 1% 3%;
     line-height: 1.5;
     font-size: 1.3rem;
   }
-  .footer__content-top{
+  .footer__content-top {
     display: flex;
   }
-  .footer-p-suscribe{
-    border-top:0;
-    border-left:1px solid #f5be0b ;
+  .footer-p-suscribe {
+    border-top: 0;
+    border-left: 1px solid #f5be0b;
     color: #fff;
     padding: 0 5%;
   }
-  .footer_logo{
+  .footer_logo {
     width: 30%;
     object-fit: contain;
   }
-  .footer-content-left{
+  .footer-content-left {
     width: 40%;
   }
-  .footer-p-suscribe span{
+  .footer-p-suscribe span {
     font-size: 2rem;
   }
-  .footer .grid__item{
+  .footer .grid__item {
     padding: 0;
   }
 }
 .socialnav {
   position: fixed;
-  bottom: 5%;
-  right: 5%;
-  width: 15%;
-  color:  #000;
+  bottom: 20px;
+  right: 20px;
+  height: 70px;
+  width: 70px;
+  color: #000;
+  z-index: 1;
 }
-.list-socialnav{
+.list-socialnav {
   display: none;
   list-style: none;
   padding: 16%;
-  margin-bottom: 115%;
   background-color: #f5be0b;
+  position: absolute;
+  bottom: 70px;
 }
-.list-social-item img{
+.list-social-item img {
   width: 100%;
 }
-.socialmenu{
-  display:  none !important;
+.socialmenu {
+  display: none !important;
 }
-.socialmenu-icon{
-  display:  block ;
-  width:  100%;
+.socialmenu-icon {
+  display: flex;
+  width: 70px;
+  height: 70px;
   cursor: pointer;
-  position: absolute;
   bottom: 0;
   background-color: #f5be0b;
   text-align: center;
-  border-radius: 100%;
+  border-radius: 50%;
   font-size: 280%;
   letter-spacing: -0.2rem;
   line-height: 130.952%;
+  align-items: center;
+  justify-content: center;
 }
-.fa-ellipsis-h{
-  width:  100%;
-  height:   auto;
+.fa-ellipsis-h {
+  width: 100%;
+  height: auto;
 }
 .socialnav #menuclick:checked ~ .list-socialnav {
   display: block;
 }
-@media screen and (min-width: 990px){
-  .socialnav{
+@media screen and (min-width: 990px) {
+  .socialnav {
     width: 3%;
     right: 0;
     bottom: 40%;
   }
-  .socialmenu-icon{
+  .socialmenu-icon {
     display: none;
   }
-  .list-socialnav{
+  .list-socialnav {
     display: block;
   }
 }

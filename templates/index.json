@@ -3,8 +3,8 @@
     "16293170045db263e5": {
       "type": "image-banner-slider",
       "settings": {
-        "image": "shopify:\/\/shop_images\/close-up-of-motherboard.jpg",
-        "image_2": "shopify:\/\/shop_images\/easy-listening.jpg",
+        "image": "shopify:\/\/shop_images\/banner_ofertas_1.png",
+        "image_2": "shopify:\/\/shop_images\/Halloween_banner.png",
         "desktop_text_box_position": "center",
         "color_scheme": "background-1",
         "stack_images_on_mobile": true,
