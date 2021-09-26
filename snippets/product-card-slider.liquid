@@ -13,7 +13,7 @@
 {% endcomment %}
 
 <div class="card-container">
-  <a href="{{ product_card_product.url | default: '#' }}" class="">
+  <a href="{{ product_card_product.url | default: '#' }}" class="link-product">
     <span class="visually-hidden">{{ product_card_product.title | escape }}</span>
 
     
@@ -93,7 +93,6 @@
         {% render 'price', product: product_card_product, price_class: '' %}
       </div>
     </div>
-    <button>Agregar</button>
   </a>
 
 </div>

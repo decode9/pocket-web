@@ -26,10 +26,9 @@
           <li class="team-item" {{ block.shopify_attributes }}>
             <a class="item-link" href="{{ block.settings.item_link }}">
               <div class="team-card">
-                <i class="fab fa-linkedin-in icon-in"></i>
                 {%- if block.settings.image == blank -%}
                 <div class="team-images-container">
-                  <div class="team-placeholder"></div>
+                  <div class="team-placeholder"><i class="fab fa-linkedin-in icon-in"></i></div>
                 </div>
                 {% endif %}
                 {%- if block.settings.image != blank -%}
@@ -87,10 +86,9 @@
           <li class="team-item" {{ block.shopify_attributes }}>
             <a class="item-link" href="{{ block.settings.item_link }}">
               <div class="team-card">
-                <i class="fab fa-linkedin-in icon-in"></i>
                 {%- if block.settings.image == blank -%}
                 <div class="team-images-container">
-                  <div class="team-placeholder"></div>
+                  <div class="team-placeholder"><i class="fab fa-linkedin-in icon-in"></i></div>
                 </div>
                 {% endif %}
                 {%- if block.settings.image != blank -%}

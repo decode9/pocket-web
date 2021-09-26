@@ -10,19 +10,22 @@
 .product-recommendations .grid__item {
   padding-bottom: 0;
 }
-.recommendation-list{
+.recommendation-list {
   overflow: hidden;
   list-style: none;
   padding: 0;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
 }
-.recommendation-list-m{
+.recommendation-list-m {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   list-style: none;
   padding: 0;
 }
-.recommendation-item-m{
+.recommendation-item-m {
   margin-bottom: 2.5%;
   padding-right: 17%;
   width: 48%;
@@ -31,14 +34,14 @@
   position: relative;
   text-decoration: none;
 }
-.recommendation-item-m img{
+.recommendation-item-m img {
   width: 100%;
   height: 175px;
   object-fit: contain;
   margin-right: 10%;
   top: 0;
 }
-.recommendation-item-m button{
+.recommendation-item-m button {
   top: 0;
   right: 0;
   padding: 0 2%;
@@ -50,11 +53,12 @@
   display: flex;
   align-items: center;
 }
-.recommendation-item{
+.recommendation-item {
   position: relative;
   margin: 0.5%;
+  width: 33% !important;
 }
-.recommendation-item button{
+.recommendation-item button {
   position: absolute;
   bottom: 5%;
   right: 5%;
@@ -62,7 +66,8 @@
   background-color: #f5be0b;
   border: none;
 }
-.slider-prev-recommendation,.slider-next-recommendation{
+.slider-prev-recommendation,
+.slider-next-recommendation {
   position: absolute;
   width: 35px;
   height: 35px;
@@ -73,9 +78,9 @@
   border: 1px solid #000;
   border-radius: 100%;
 }
-.slider-prev-recommendation{
+.slider-prev-recommendation {
   left: -35px;
 }
-.slider-next-recommendation{
+.slider-next-recommendation {
   right: -35px;
 }

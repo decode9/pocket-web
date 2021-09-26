@@ -1,4 +1,18 @@
 /* Color custom properties */
+@font-face {
+  font-family: 'AvenirBlack';
+  src: url('/assets/AvenirLTStd-Black.otf');
+}
+
+@font-face {
+  font-family: 'AvenirBook';
+  src: url('/assets/AvenirLTStd-Book.otf');
+}
+
+@font-face {
+  font-family: 'AvenirRoman';
+  src: url('/assets/AvenirLTStd-Roman.otf');
+}
 
 :root,
 .color-background-1 {
@@ -57,7 +71,7 @@
   --alpha-button-background: 1;
   --alpha-button-border: 1;
 }
-.page-title{
+.page-title {
   display: none;
 }
 
@@ -192,19 +206,13 @@ html.no-js .no-js-hidden {
   margin-top: 5rem;
 }
 
-.spaced-section {
-  margin-top: 5rem;
-}
-
-.spaced-section:last-child {
-  margin-bottom: 5rem;
-}
-
 .spaced-section--full-width + .spaced-section--full-width {
   margin-top: 0;
 }
 
 .spaced-section--full-width:first-child {
+  display: block;
+  position: relative;
 }
 
 .spaced-section--full-width:last-child {
@@ -675,16 +683,14 @@ summary::-webkit-details-marker {
 *:focus-visible {
   outline: 0.2rem solid rgba(var(--color-foreground), 0.5);
   outline-offset: 0.3rem;
-  box-shadow: 0 0 0 0.3rem rgb(var(--color-background)),
-    0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
+  box-shadow: 0 0 0 0.3rem rgb(var(--color-background)), 0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
 }
 
 /* Fallback - for browsers that don't support :focus-visible, a fallback is set for :focus */
 *:focus {
   outline: 0.2rem solid rgba(var(--color-foreground), 0.5);
   outline-offset: 0.3rem;
-  box-shadow: 0 0 0 0.3rem rgb(var(--color-background)),
-    0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
+  box-shadow: 0 0 0 0.3rem rgb(var(--color-background)), 0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
 }
 
 /* Negate the fallback side-effect for browsers that support :focus-visible */
@@ -725,8 +731,6 @@ summary::-webkit-details-marker {
   outline: 0 !important;
 }
 
-/* component-title */
-.title,
 .title-wrapper-with-link {
   margin: 3rem 0 2rem;
 }
@@ -735,6 +739,11 @@ summary::-webkit-details-marker {
   margin: 0;
 }
 
+.title {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-size: 35px;
+}
 .title-wrapper {
   margin-bottom: 3rem;
 }
@@ -766,7 +775,6 @@ summary::-webkit-details-marker {
 }
 
 @media screen and (min-width: 990px) {
-  .title,
   .title-wrapper-with-link {
     margin: 5rem 0 3rem;
   }
@@ -1089,14 +1097,12 @@ deferred-media {
 
 .button:focus-visible {
   box-shadow: 0 0 0 0.1rem rgba(var(--color-button), var(--alpha-button-border)),
-    0 0 0 0.3rem rgb(var(--color-background)),
-    0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
+    0 0 0 0.3rem rgb(var(--color-background)), 0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
 }
 
 .button:focus {
   box-shadow: 0 0 0 0.1rem rgba(var(--color-button), var(--alpha-button-border)),
-    0 0 0 0.3rem rgb(var(--color-background)),
-    0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
+    0 0 0 0.3rem rgb(var(--color-background)), 0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
 }
 
 .button,
@@ -1209,16 +1215,14 @@ deferred-media {
 .field__input:focus-visible,
 .select__select:focus-visible,
 .field input:focus-visible {
-  box-shadow: 0 0 0 0.1rem rgba(var(--color-foreground), 0.55),
-    0 0 0 0.3rem rgb(var(--color-background)),
+  box-shadow: 0 0 0 0.1rem rgba(var(--color-foreground), 0.55), 0 0 0 0.3rem rgb(var(--color-background)),
     0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
 }
 
 .field__input:focus,
 .select__select:focus,
 .field input:focus {
-  box-shadow: 0 0 0 0.1rem rgba(var(--color-foreground), 0.55),
-    0 0 0 0.3rem rgb(var(--color-background)),
+  box-shadow: 0 0 0 0.1rem rgba(var(--color-foreground), 0.55), 0 0 0 0.3rem rgb(var(--color-background)),
     0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
 }
 
@@ -1271,14 +1275,14 @@ deferred-media {
 
 .field__label,
 .customer .field label {
-  font-size: 1.6rem;
-  left: 1.5rem;
+  font-family: 'AvenirBook';
+  font-size: 1.2rem;
+  left: 2rem;
   top: 1rem;
   margin-bottom: 0;
   pointer-events: none;
   position: absolute;
-  transition: top var(--duration-short) ease,
-    font-size var(--duration-short) ease;
+  transition: top var(--duration-short) ease, font-size var(--duration-short) ease;
   color: #000;
   letter-spacing: 0.1rem;
   line-height: 1.5;
@@ -1645,11 +1649,10 @@ input[type='checkbox'] {
   background-color: #000;
   padding-top: 1rem;
   padding-bottom: 1rem;
-  color: #FFF;
+  color: #fff;
   width: 100%;
   margin: 0;
-  position: fixed ;
-  
+  position: fixed;
 }
 
 @media screen and (min-width: 990px) {
@@ -1786,10 +1789,8 @@ input[type='checkbox'] {
   width: 4.4rem;
 }
 
-
-
 @media screen and (max-width: 989px) {
-  menu-drawer ~ .header__icons .header__icon--account{
+  menu-drawer ~ .header__icons .header__icon--account {
     display: none;
   }
 }
@@ -1982,8 +1983,7 @@ details[open] > .header__icon--menu .icon-hamburger {
 }
 
 .header__submenu {
-  transition: opacity var(--duration-default) ease,
-    transform var(--duration-default) ease;
+  transition: opacity var(--duration-default) ease, transform var(--duration-default) ease;
 }
 
 .header__submenu.list-menu {
@@ -2049,40 +2049,218 @@ details-disclosure > details {
   }
 }
 
-.login_p{
+.login_p {
   margin: 0 1.2rem;
   text-decoration: none;
   background-color: #f5be0b;
   padding: 0.5rem 0;
   color: black;
 }
-.register_p{
+.register_p {
   margin: 0 1.2rem;
   text-decoration: none;
   padding: 0.5rem 0;
 }
 
-.header__icons_hidden{
+.header__icons_hidden {
   display: none;
 }
-.header__search_hidden{
+.header__search_hidden {
   display: block;
   grid-column: 1/4;
   margin-top: 4%;
 }
 
-@media screen and (min-width: 990px){
-  .header__icons_hidden{
+@media screen and (min-width: 990px) {
+  .header__icons_hidden {
     display: flex;
     align-items: center;
   }
-  .header__search_hidden{
+  .header__search_hidden {
     display: none;
   }
 }
 
+.productContent {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.searchContainer {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.productContainer {
+  width: 21%;
+  height: 250px;
+  margin: 2%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.imageContainer {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 5%;
+}
+.productImage {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.productInfo {
+  width: 100%;
+  height: 20%;
+  box-sizing: border-box;
+  padding: 0 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.CategoryTitle {
+  font-family: 'AvenirRoman';
+}
+.productTitle {
+  font-size: 15px;
+  margin: 0;
+  font-weight: 600;
+  font-family: 'AvenirBlack';
+}
+
+.productDescription {
+  height: inherit;
+  display: block;
+  overflow: hidden;
+}
+
+.productDescription > p {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  overflow: hidden;
+  height: 100%;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.productDescription > p > strong {
+  font-weight: normal;
+}
+.productDescription > p > b {
+  font-weight: normal;
+}
+.productDescription > p:first-child {
+  display: none;
+}
+.productSales {
+  height: max-content;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.productButton {
+  padding: 10px 15px;
+  background-color: #f5be0b;
+  color: #000;
+  font-size: 15px;
+  border: none;
+}
+
+.mainCollection {
+  display: flex;
+}
+.collectionFilters {
+  width: 300px;
+  background-color: #f1f1f2;
+  box-shadow: 0px 4px 4px #000;
+  padding: 30px;
+  box-sizing: border-box;
+}
+.collectionFilterForm {
+  width: 240px;
+}
+
+.collectionSort {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.sortSelect {
+  background: transparent;
+  border: 2px solid #f5be0b;
+  cursor: pointer;
+  font-family: 'AvenirRoman';
+}
+.collectionFilterBox {
+  width: 100%;
+}
+
+.collectionFilter {
+  width: 100%;
+  border: 2px solid #f5be0b;
+  padding: 0.9rem !important;
+  margin: 10px 0;
+  font-family: 'AvenirRoman';
+}
+.priceFilterSummary{
+  margin-bottom: 20px;
+}
+.field__currency{
+  font-family: 'AvenirRoman';
+}
+.filterLabel {
+  font-family: 'AvenirRoman';
+}
+.maxFilterLabel {
+  font-size: 12px;
+}
+
+.resetFilter {
+  font-size: 10px;
+  color: #f5be0b;
+}
+
+.priceRange {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.inputFilterPrice {
+  margin-left: 5px;
+  background-color: transparent;
+  border: 2px solid #f5be0b;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.priceData {
+  width: 40%;
+  align-items: center;
+}
+
+#MainContent {
+  padding-top: 83px;
+}
+
 /* collection */
-.collection-list-slider{
+.collection-list-slider {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -2090,7 +2268,7 @@ details-disclosure > details {
   padding: 0;
 }
 
-.collection-item-slider{
+.collection-item-slider {
   margin-bottom: 2.5%;
   padding-right: 17%;
   width: 48%;
@@ -2099,14 +2277,14 @@ details-disclosure > details {
   position: relative;
   text-decoration: none;
 }
-.collection-item-slider img{
+.collection-item-slider img {
   width: 100%;
   height: 175px;
   object-fit: contain;
   margin-right: 10%;
   top: 0;
 }
-.collection-item-slider button{
+.collection-item-slider button {
   top: 0;
   right: 0;
   padding: 0 2%;
@@ -2118,17 +2296,22 @@ details-disclosure > details {
   display: flex;
   align-items: center;
 }
-.item-info{
-  position: absolute;
-  bottom: 0;
-  margin-right: 35%;
+.item-info {
+  position: relative;
+  width: 100%;
   text-decoration: none;
   color: #000;
+  display: flex;
+  padding: 0 10px;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: space-between;
 }
-.item-info_text{
+.item-info_text {
   display: block;
+  font-size: 1.5rem;
 }
-.oferta{
+.oferta {
   position: absolute;
   top: 0;
   text-decoration: none;
@@ -2136,36 +2319,34 @@ details-disclosure > details {
   background-color: #f5be0b;
   padding: 2.5% 6%;
   font-size: 1rem;
+  left: 0;
 }
-.slider-desktop{
+.slider-desktop {
   display: none;
 }
-@media screen and (min-width: 990px){
-  .slider-mobile{
+
+@media screen and (min-width: 990px) {
+  .slider-mobile {
     display: none;
   }
-  .slider-desktop{
+  .slider-desktop {
     display: flex;
   }
-  .oferta{
+  .oferta {
     padding: 2% 4%;
   }
-  .item-info{
-    bottom: 5%;
-    left: 5%;
-  }
 }
-.collection-list-slider-d{
+.collection-list-slider-d {
   overflow: hidden;
   list-style: none;
   padding: 0;
 }
-.collection-item-slider-d{
+.collection-item-slider-d {
   position: relative;
   margin: 0.5%;
 }
-.collection-item-slider-d button{
-  position: absolute;
+.collection-item-slider-d button {
+  position: relative;
   bottom: 5%;
   right: 5%;
   padding: 3% 5%;
@@ -2173,10 +2354,11 @@ details-disclosure > details {
   border: none;
 }
 
-.slider-desktop{
+.slider-desktop {
   position: relative;
 }
-.slider-prev-collection,.slider-next-collection{
+.slider-prev-collection,
+.slider-next-collection {
   position: absolute;
   width: 35px;
   height: 35px;
@@ -2187,9 +2369,143 @@ details-disclosure > details {
   border: 1px solid #000;
   border-radius: 100%;
 }
-.slider-next-collection{
+.slider-next-collection {
   right: -35px;
 }
-.slider-prev-collection{
+.slider-prev-collection {
   left: -35px;
+}
+
+.card-container {
+  display: flex;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  /* box-shadow: -2px 3px 1px #0000000f; */
+}
+
+.link-product {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.motion-reduce {
+  max-width: 100%;
+  height: inherit;
+}
+
+.motion-reduce:not(.menu-drawer) {
+  max-height: 100%;
+}
+
+.linkContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 1rem;
+  font-family: 'AvenirRoman';
+}
+
+.linkBox {
+  border: 2px solid #f5be0b;
+  width: 20px;
+  height: 20px;
+  margin-right: 15px;
+}
+
+.linkBoxFull {
+  background-color: #f5be0b;
+}
+
+.linkTitle {
+  color: black;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.collectionHeader {
+  padding: 0 45px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.collectionMainTitle {
+  font-size: 30px;
+  text-transform: capitalize;
+  font-family: 'AvenirBlack';
+}
+
+.deployFilters {
+  cursor: pointer;
+  display: none;
+}
+
+@media screen and (max-width: 990px) {
+  .ofertTitle {
+    margin-top: 40px;
+  }
+  .deployFilters {
+    display: block;
+  }
+  .collectionFilters {
+    display: none;
+    width: 0px;
+    transition: all 1s;
+  }
+  .productContainer {
+    width: 46%;
+  }
+  #MainContent {
+    padding-top: 141px;
+  }
+  .collectionFiltersResponsive {
+    display: block;
+    position: fixed;
+    width: 300px;
+    transition: all 1s;
+    z-index: 2;
+    height: calc(100vh - 141px);
+    overflow-y: auto;
+  }
+  .collection-item-slider {
+    margin: 0;
+    width: 50%;
+    padding: 0;
+  }
+  .collection-item-slider button {
+    height: auto;
+    width: auto;
+    padding: 10px;
+    position: relative;
+  }
+  .link-product {
+    flex-direction: column;
+  }
+
+  .slider-desktop {
+    display: none;
+  }
+  .item-info {
+    position: relative;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  #MainContent {
+    padding-top: 130px;
+  }
 }
