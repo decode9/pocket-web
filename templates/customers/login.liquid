@@ -99,33 +99,29 @@
         </label>
       </div>
 
-      {%- if form.password_needed -%}
-        <div class="field">          
-          <input
-            type="password"
-            value=""
-            name="customer[password]"
-            id="CustomerPassword"
-            autocomplete="current-password"
-            {% if form.errors contains 'form' %}
-              aria-invalid="true"
-            {% endif %}
-            placeholder="{{ 'customer.login_page.password' | t }}"
-          >
-          <label for="CustomerPassword">
-            {{ 'customer.login_page.password' | t }}
-          </label>
-        </div>
-
-        <a href="#recover">
-          {{ 'customer.login_page.forgot_password' | t }}
-        </a>
-      {%- endif -%}
-
+      
+       <div class="field">          
+         <input
+           type="password"
+           value=""
+           name="customer[password]"
+           id="CustomerPassword"
+           autocomplete="current-password"
+           {% if form.errors contains 'form' %}
+             aria-invalid="true"
+           {% endif %}
+           placeholder="{{ 'customer.login_page.password' | t }}"
+         >
+         <label for="CustomerPassword">
+           {{ 'customer.login_page.password' | t }}
+         </label>
+       </div>
       <button>
         {{ 'customer.login_page.sign_in' | t }}
       </button>
-
+       <a href="#recover">
+         {{ 'customer.login_page.forgot_password' | t }}
+       </a>
       <a href="{{ routes.account_register_url }}">
         {{ 'customer.login_page.create_account' | t }}
       </a>

@@ -171,6 +171,28 @@
                       {% endif %}
                     </li>
                   </ul>
+                  <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}" class="header__icon--account link link--text focus-inset login_p">
+                    {% render 'icon-account' %}
+                    <span class="visually-hidden">
+                      {%- liquid
+                        if customer
+                          echo 'customer.account_fallback' | t
+                        else
+                          echo 'customer.log_in' | t
+                        endif
+                      -%}
+                    </span>
+                  </a>
+                  {% if customer==False %}
+                    <a href="{{ routes.account_register_url }}" class="header__icon--account link link--text focus-inset register_p">
+                        <p class="register_p">Crear cuanta</p>
+                    </a>
+                  {% else %}
+                    <a href="{{ routes.account_logout_url }}"class="header__icon--account link link--text focus-inset register_p">
+                      {{ 'customer.log_out' | t }} 
+                    </a>
+                  {% endif %}
+
                 </nav>
                 <div class="menu-drawer__utility-links">
                   {%- if shop.customer_accounts_enabled -%}
@@ -390,6 +412,10 @@
         {% if customer==False %}
           <a href="{{ routes.account_register_url }}" class="header__icon--account link link--text focus-inset register_p">
               <p class="register_p">Crear cuenta</p>
+          </a>
+        {% else %}
+          <a href="{{ routes.account_logout_url }}"class="header__icon--account link link--text focus-inset register_p">
+            {{ 'customer.log_out' | t }} 
           </a>
         {% endif %}
         <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}" class="header__icon--account link link--text focus-inset login_p">
