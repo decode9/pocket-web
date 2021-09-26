@@ -1,6 +1,3 @@
-.image-with-text {
-  margin-top: 5rem;
-}
 
 .image-with-text:not(.color-scheme-background-1) {
   margin-bottom: 5rem;
@@ -125,11 +122,13 @@
 
 .image-with-text__heading {
   margin-bottom: 0;
+  font-family: 'AvenirBlack';
 }
 
 .image-with-text__text p {
   margin-top: 0;
   margin-bottom: 1rem;
+  font-family: 'AvenirRoman';
 }
 .image-with-text__media img{
   background-color: #000;
@@ -146,25 +145,30 @@
 
   /* component-image-with-text.css | http://127.0.0.1:9292/assets/component-image-with-text.css?v=17088832233305839052 */
 
+
+
+  .image-with-text__text p {
+    text-align: justify;
+  }
   .imagen-container {
     /* width: 40%; */
     width: 100%;
   }
 
   .image-with-text {
-    /* margin-top: 5rem; */
-    margin-top: 14rem;
     padding: 0 7%;
   }
 
   .image-with-text__content {
     padding: 4% 0;
+    align-items: center;
   }
 
   /* Elemento | http://127.0.0.1:9292/pages/quienes-somos */
 
   .image-with-text__heading {
     font-size: 2.2rem;
+    text-align: center;
   }
 
   /* Elemento | http://127.0.0.1:9292/pages/quienes-somos */
