@@ -1558,8 +1558,8 @@ input[type='checkbox'] {
   justify-content: center;
   align-items: center;
   font-size: 0.9rem;
-  bottom: 0.8rem;
-  right: 3rem;
+  bottom: -6px;
+  right: -10px;
   line-height: 1.1;
 }
 
@@ -1788,6 +1788,10 @@ input[type='checkbox'] {
   height: 4.4rem;
   width: 4.4rem;
 }
+.header__icon--cart{
+  position: relative;
+}
+
 
 @media screen and (max-width: 989px) {
   menu-drawer ~ .header__icons .header__icon--account {
