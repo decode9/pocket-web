@@ -1549,7 +1549,7 @@ input[type='checkbox'] {
 
 .cart-count-bubble {
   position: absolute;
-  background-color: rgb(var(--color-base-accent-1));
+  background-color: #F7BE00;
   color: rgb(var(--color-base-solid-button-labels));
   height: 1.7rem;
   width: 1.7rem;

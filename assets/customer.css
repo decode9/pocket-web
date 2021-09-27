@@ -400,22 +400,10 @@
 }
 
 /* Account/Order */
-:is(.account, .order) {
-  margin: 6rem auto 9rem;
-  max-width: 120rem;
-  padding: 0 2rem;
-}
 
 @media screen and (min-width: 750px) {
   :is(.account, .order) {
     padding: 0 5rem;
-  }
-}
-
-@media screen and (min-width: 990px) {
-  :is(.account, .order) > div:nth-of-type(2) {
-    display: flex;
-    margin-top: 5rem;
   }
 }
 
@@ -481,16 +469,6 @@
 .account table td:first-of-type a {
   text-decoration: none;
 }
-/*
-  padding: 1.1rem 1.5rem;
-  box-shadow: 0 0 0 0.1rem rgba(var(--color-link), 0.2);
-  font-size: 1.2rem;
-}
-
-.account table td:first-of-type a:hover {
-  box-shadow: 0 0 0 0.2rem rgba(var(--color-link), 0.2);
-  color: rgb(var(--color-link));
-}*/
 
 .order td:first-of-type {
   align-items: initial;
@@ -756,9 +734,124 @@ li[data-address] > h2 {
 .field input{
   background-color: #f2f2f1;
 }
-.user-details{
-  margin-top: 40%;
+.user-details h1{
+  margin: 0;
+  text-align: center;
+}
+.directory-user{
+  width: 100%;
+  background-color: #f1f1f2;
+  margin: 33% 0 0;
+  padding: 5%;
+  box-shadow: 1px 1px 4px grey;
+}
+.directory-address{display: none;}
+.addressinput{display: none !important;}
+.button-address{
+  cursor: pointer;
+  text-align: center;
+  padding: 1%;
+  margin: 1%!important;
+  background-color: #f5be0b!important;
+  color: #000!important;
+  text-decoration: none !important;
+  width: 100%;
+}
+.directory-user #addressclick:checked ~ .directory-address {
+  display: block;
+}
+.address-box{
+  padding: 2% 4%;
+  background-color: #fff;
+  box-shadow: 1px 1px 4px grey;
+}
+
+.order-title{
+  text-align: center;
+}
+.order-title  h1{
+  display:  none;
 }
 .order-item{
+  margin: 5%;
+  padding: 5%;
   background-color: #f1f1f2;
+  line-height: 25px;
+  box-shadow: 1px 1px 4px grey;
+}
+.order-item p{
+  margin: 0;
+}
+.order{
+  margin-top: 33%;
+  padding: 10%;
+}
+@media screen and (min-width: 990px){
+  .directory-user{
+    width: 30%;
+    height: 89%;
+    padding: 3%;
+    margin: 5% 0 0 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+  }
+  .account{
+    margin-top: 5%;
+  }
+  .directory-address{display: block;}
+  .button-address{display: none;}
+  .order-container{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+  }
+  .order-title  h1{
+    display:  block ;
+    margin:   0;
+  }
+  .order-list{
+    margin-top: 30%;
+    padding: 0!important;
+  }
+  .order-item {
+    margin: 2%;
+    padding: 3%;
+    display: flex;
+  }
+  .order-title{
+    width:  100%;
+    text-align: left;
+    padding: 5% 0 0 5%;
+    position: absolute;
+    background-color: #f1f1f1;
+    left: 0;
+    z-index: -2;
+  }
+  .user-details{
+    width: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 175px;
+    padding: 5% 0 0 0;
+    background-color: #000;
+    color: #F7BE00;
+  }
+  .directory-address{
+    position: relative;
+    margin-top:   50%;
+  }
+  .directory-address h2{
+    position:   absolute;
+    top:  -35%;
+    color:  #fff;
+  }
+  .address-box{background-color:  #D0D2D3;}
+  .button-address{
+    width:  50%;
+    position:   relative  ;
+    right: -145px;
+  }
 }
