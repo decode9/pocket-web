@@ -9,14 +9,7 @@
     }
   {%- endstyle -%}
 {%- endif -%}
-
-{%- for block in section.blocks -%}
-  {%- case block.type -%}
-    {%- when 'buttons' -%}
-        <a{% if block.settings.button_link_1 != blank %} href="{{ block.settings.button_link_1 }}"{% endif %} >
-  {%- endcase -%}
-{%- endfor -%}
-
+<a href="/collections/ofertas" title="">
 <div id="Banner-{{ section.id }}" class="banner{% if section.settings.stack_images_on_mobile and section.settings.image != blank and section.settings.image_2 != blank%} banner--stacked{% endif %}{% if section.settings.adapt_height_first_image and section.settings.image != blank %} banner--adapt{% endif %} banner-publi">
   {%- if section.settings.image != blank -%}
     <div class="banner__media media{% if section.settings.image == blank and section.settings.image_2 == blank %} placeholder{% endif %}{% if section.settings.image_2 != blank %} banner__media-half{% endif %}">
@@ -61,15 +54,29 @@
     </div>
   {%- endif -%}
   <div class="banner__content page-width" style="align-items: {{ section.settings.desktop_text_box_position }};">
-    
+    <div class="banner__box ">
+      {%- for block in section.blocks -%}
+        {%- case block.type -%}
+          {%- when 'heading' -%}
+            <h2 class="banner__heading h1" {{ block.shopify_attributes }}>
+              <span>{{ block.settings.heading | escape }}</span>
+            </h2>
+          {%- when 'text' -%}
+            <div class="banner__text" {{ block.shopify_attributes }}>
+              <span>{{ block.settings.text | escape }}</span>
+            </div>
+          {%- when 'buttons' -%}
+            <div class="banner__buttons{% if block.settings.button_label_1 != blank and block.settings.button_link_1 != blank and block.settings.button_label_2 != blank and block.settings.button_link_2 != blank %} banner__buttons--multiple{% endif %} " {{ block.shopify_attributes }}>
+              {%- if block.settings.button_label_2 != blank -%}
+                <a{% if block.settings.button_link_2 != blank %} href="{{ block.settings.button_link_2 }}"{% endif %} class="button{% if block.settings.button_style_secondary_2 %} button--secondary{% else %} button--primary{% endif %} banner-publi-button"{% if block.settings.button_link_2 == blank %} aria-disabled="true"{% endif %}>{{ block.settings.button_label_2 | escape }}</a>
+              {%- endif -%}
+            </div>
+        {%- endcase -%}
+      {%- endfor -%}
+    </div>
   </div>
 </div>
-{%- for block in section.blocks -%}
-  {%- case block.type -%}
-    {%- when 'buttons' -%}
-      </a>
-  {%- endcase -%}
-{%- endfor -%}
+</a>
 {% schema %}
 {
   "name": "t:sections.image-banner.name",
