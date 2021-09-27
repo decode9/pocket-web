@@ -19,35 +19,76 @@
 <section class="page-width">
   <div class="product grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
     <div class="grid__item product__media-wrapper">
-      <slider-component class="slider-mobile-gutter">
+      <slider-component class="slider-mobile-gutter sliderImgProduct">
         <a class="skip-to-content-link button visually-hidden" href="#ProductInfo-{{ section.id }}">
           {{ "accessibility.skip_to_product_info" | t }}
         </a>
-        <ul class="product__media-list grid grid--peek list-unstyled slider slider--mobile" role="list">
-          {%- if product.selected_or_first_available_variant.featured_media != null -%}
-            {%- assign media = product.selected_or_first_available_variant.featured_media -%}
-            <li class="product__media-item grid__item slider__slide{% if media.media_type != 'image' %} product__media-item--full{% endif %}" data-media-id="{{ section.id }}-{{ media.id }}">
-              {% render 'product-thumbnail', media: media, position: 'featured', loop: section.settings.enable_video_looping, modal_id: section.id %}
-            </li>
-          {%- endif -%}
-          {%- for media in product.media -%}
-            {%- unless media.id == product.selected_or_first_available_variant.featured_media.id -%}
-              <li class="product__media-item grid__item slider__slide{% if media.media_type != 'image' %} product__media-item--full{% endif %}" data-media-id="{{ section.id }}-{{ media.id }}">
-                {% render 'product-thumbnail', media: media, position: forloop.index, loop: section.settings.enable_video_looping, modal_id: section.id %}
-              </li>
-            {%- endunless -%}
-          {%- endfor -%}
-        </ul>
-        <!-- <div class="slider-buttons slider-buttons--overlay no-js-hidden{% if product.media.size < 2 %} small-hide{% endif %}">
-          <div class="slider-counter caption">
-            <span class="slider-counter--current">1</span>
-            <span aria-hidden="true"> / </span>
-            <span class="visually-hidden">{{ 'accessibility.of' | t }}</span>
-            <span class="slider-counter--total">{{ product.media.size }}</span>
+        <div class='productMediaContent'>
+          <div class="productMiniContent" role="list">
+            {%- if product.selected_or_first_available_variant.featured_media != null -%}
+              {%- assign media = product.selected_or_first_available_variant.featured_media -%}
+              <div class="productMini" onclick='selectImg({{ media.id }})'>
+                <img
+                  srcset="{% if media.preview_image.width >= 288 %}{{ media.preview_image | img_url: '288x' }} 288w,{% endif %}
+                          {% if media.preview_image.width >= 576 %}{{ media.preview_image | img_url: '576x' }} 576w,{% endif %}
+                          {% if media.preview_image.width >= 550 %}{{ media.preview_image | img_url: '550x' }} 550w,{% endif %}
+                          {% if media.preview_image.width >= 1100 %}{{ media.preview_image | img_url: '1100x' }} 1100w{% endif %}"
+                  src="{{ media | img_url: '550x550' }}"
+                  sizes="(min-width: 1200px) calc((1200px - 10rem) / 2), (min-width: 750px) calc((100vw - 11.5rem) / 2), calc(100vw - 4rem)"
+                  loading="lazy"
+                  width="576"
+                  height="{{ 576 | divided_by: media.preview_image.aspect_ratio | ceil }}"
+                  alt="{{ media.preview_image.alt | escape }}"
+                >
+              </div>
+            {%- endif -%}
+            {%- for media in product.media -%}
+              {%- unless media.id == product.selected_or_first_available_variant.featured_media.id -%}
+                <div class="productMini" onclick='selectImg({{ media.id }})' >
+                  <img
+                    srcset="{% if media.preview_image.width >= 288 %}{{ media.preview_image | img_url: '288x' }} 288w,{% endif %}
+                            {% if media.preview_image.width >= 576 %}{{ media.preview_image | img_url: '576x' }} 576w,{% endif %}
+                            {% if media.preview_image.width >= 550 %}{{ media.preview_image | img_url: '550x' }} 550w,{% endif %}
+                            {% if media.preview_image.width >= 1100 %}{{ media.preview_image | img_url: '1100x' }} 1100w{% endif %}"
+                    src="{{ media | img_url: '550x550' }}"
+                    sizes="(min-width: 1200px) calc((1200px - 10rem) / 2), (min-width: 750px) calc((100vw - 11.5rem) / 2), calc(100vw - 4rem)"
+                    loading="lazy"
+                    width="576"
+                    height="{{ 576 | divided_by: media.preview_image.aspect_ratio | ceil }}"
+                    alt="{{ media.preview_image.alt | escape }}"
+                  >
+                </div>
+              {%- endunless -%}
+            {%- endfor -%}
           </div>
-          <button type="button" class="slider-button slider-button--prev" name="previous" aria-label="{{ 'accessibility.previous_slide' | t }}">{% render 'icon-caret' %}</button>
-          <button type="button" class="slider-button slider-button--next" name="next" aria-label="{{ 'accessibility.next_slide' | t }}">{% render 'icon-caret' %}</button>
-        </div> -->
+          <div class="contentProductMedia product__media-list grid grid--peek list-unstyled slider slider--mobile" role="list">
+            {%- if product.selected_or_first_available_variant.featured_media != null -%}
+              {%- assign media = product.selected_or_first_available_variant.featured_media -%}
+              <div id="productImg-{{ media.id }}" class="productImg product__media-item grid__item slider__slide{% if media.media_type != 'image' %} product__media-item--full{% endif %}" data-media-id="{{ section.id }}-{{ media.id }}">
+                {% render 'product-thumbnail', media: media, position: 'featured', loop: section.settings.enable_video_looping, modal_id: section.id %}
+              </div>
+            {%- endif -%}
+            {%- assign firstMedia = product.media[0] -%}
+
+            {%- for media in product.media -%}
+              {%- unless media.id == product.selected_or_first_available_variant.featured_media.id -%}
+                <div style="{% if media.id != firstMedia.id or product.selected_or_first_available_variant.featured_media != null %} display: none {% endif %}" id="productImg-{{ media.id }}" class="productImg product__media-item grid__item slider__slide{% if media.media_type != 'image' %} product__media-item--full{% endif %}" data-media-id="{{ section.id }}-{{ media.id }}">
+                  {% render 'product-thumbnail', media: media, position: forloop.index, loop: section.settings.enable_video_looping, modal_id: section.id %}
+                </div>
+              {%- endunless -%}
+            {%- endfor -%}
+          </div>
+          <!-- <div class="slider-buttons slider-buttons--overlay no-js-hidden{% if product.media.size < 2 %} small-hide{% endif %}">
+            <div class="slider-counter caption">
+              <span class="slider-counter--current">1</span>
+              <span aria-hidden="true"> / </span>
+              <span class="visually-hidden">{{ 'accessibility.of' | t }}</span>
+              <span class="slider-counter--total">{{ product.media.size }}</span>
+            </div>
+            <button type="button" class="slider-button slider-button--prev" name="previous" aria-label="{{ 'accessibility.previous_slide' | t }}">{% render 'icon-caret' %}</button>
+            <button type="button" class="slider-button slider-button--next" name="next" aria-label="{{ 'accessibility.next_slide' | t }}">{% render 'icon-caret' %}</button>
+          </div> -->
+        </div>
       </slider-component>
       {%- if first_3d_model -%}
         <button
