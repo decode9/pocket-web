@@ -3,4 +3,8 @@
 </svg> -->
 
 <!-- <button class="icon icon-account">iniciar sesión</button> -->
-<p class="login_p">Iniciar Sesión</p>
+{% if customer==False %}
+  <p class="login_p">Iniciar Sesión</p>
+{% else %}
+  <p class="login_p">Mi Cuenta</p>
+{%endif%}

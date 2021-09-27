@@ -1148,6 +1148,8 @@ deferred-media {
 .button--full-width {
   display: flex;
   width: 100%;
+  background-color: #f5be0b;
+  color: #000;
 }
 
 .button.loading {
@@ -1547,7 +1549,7 @@ input[type='checkbox'] {
 
 .cart-count-bubble {
   position: absolute;
-  background-color: rgb(var(--color-base-accent-1));
+  background-color: #F7BE00;
   color: rgb(var(--color-base-solid-button-labels));
   height: 1.7rem;
   width: 1.7rem;
@@ -2086,9 +2088,17 @@ details-disclosure > details {
   flex-wrap: wrap;
 }
 
+
+.searchContainer {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .productContainer {
   width: 21%;
-  height: 300px;
+  height: 250px;
   margin: 2%;
   box-sizing: border-box;
   display: flex;
@@ -2098,7 +2108,7 @@ details-disclosure > details {
 }
 .imageContainer {
   width: 100%;
-  height: 60%;
+  height: 80%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2114,19 +2124,21 @@ details-disclosure > details {
 
 .productInfo {
   width: 100%;
-  height: 40%;
+  height: 20%;
   box-sizing: border-box;
-  padding: 5%;
+  padding: 0 5%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: #f1f1f2;
 }
-
+.CategoryTitle {
+  font-family: 'AvenirRoman';
+}
 .productTitle {
   font-size: 15px;
   margin: 0;
   font-weight: 600;
+  font-family: 'AvenirBlack';
 }
 
 .productDescription {
@@ -2193,6 +2205,7 @@ details-disclosure > details {
   background: transparent;
   border: 2px solid #f5be0b;
   cursor: pointer;
+  font-family: 'AvenirRoman';
 }
 .collectionFilterBox {
   width: 100%;
@@ -2203,8 +2216,17 @@ details-disclosure > details {
   border: 2px solid #f5be0b;
   padding: 0.9rem !important;
   margin: 10px 0;
+  font-family: 'AvenirRoman';
 }
-
+.priceFilterSummary{
+  margin-bottom: 20px;
+}
+.field__currency{
+  font-family: 'AvenirRoman';
+}
+.filterLabel {
+  font-family: 'AvenirRoman';
+}
 .maxFilterLabel {
   font-size: 12px;
 }
@@ -2275,14 +2297,15 @@ details-disclosure > details {
   align-items: center;
 }
 .item-info {
-  position: absolute;
-  bottom: 10px;
+  position: relative;
   width: 100%;
   text-decoration: none;
   color: #000;
   display: flex;
   padding: 0 10px;
   box-sizing: border-box;
+  align-items: center;
+  justify-content: space-between;
 }
 .item-info_text {
   display: block;
@@ -2323,7 +2346,7 @@ details-disclosure > details {
   margin: 0.5%;
 }
 .collection-item-slider-d button {
-  position: absolute;
+  position: relative;
   bottom: 5%;
   right: 5%;
   padding: 3% 5%;
@@ -2370,9 +2393,14 @@ details-disclosure > details {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 .motion-reduce {
   max-width: 100%;
+  height: inherit;
+}
+
+.motion-reduce:not(.menu-drawer) {
   max-height: 100%;
 }
 
@@ -2381,6 +2409,7 @@ details-disclosure > details {
   align-items: center;
   justify-content: flex-start;
   margin-bottom: 1rem;
+  font-family: 'AvenirRoman';
 }
 
 .linkBox {
@@ -2413,7 +2442,7 @@ a {
 .collectionMainTitle {
   font-size: 30px;
   text-transform: capitalize;
-  font-family: 'AvenirBook';
+  font-family: 'AvenirBlack';
 }
 
 .deployFilters {
@@ -2422,6 +2451,9 @@ a {
 }
 
 @media screen and (max-width: 990px) {
+  .ofertTitle {
+    margin-top: 40px;
+  }
   .deployFilters {
     display: block;
   }
@@ -2445,11 +2477,30 @@ a {
     height: calc(100vh - 141px);
     overflow-y: auto;
   }
-  .slider-mobile {
+  .collection-item-slider {
+    margin: 0;
+    width: 50%;
+    padding: 0;
+  }
+  .collection-item-slider button {
+    height: auto;
+    width: auto;
+    padding: 10px;
+    position: relative;
+  }
+  .link-product {
+    flex-direction: column;
+  }
+
+  .slider-desktop {
     display: none;
   }
-  .slider-desktop {
+  .item-info {
+    position: relative;
+    padding: 0;
     display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
