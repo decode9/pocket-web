@@ -441,3 +441,15 @@ function deployFilters() {
   if (className == 'collectionFilters') document.getElementById('main-collection-filters').className = 'collectionFilters collectionFiltersResponsive'
   if (className !== 'collectionFilters') document.getElementById('main-collection-filters').className = 'collectionFilters'
 }
+
+function selectImg(img) {
+  const nodes = document.getElementsByClassName('productImg')
+  const id = `productImg-${img}`
+  for (const elem of nodes) {
+    elem.style.display = 'none'
+  }
+
+  const image = document.getElementById(id)
+  image.style.display = 'block'
+
+}
