@@ -787,19 +787,17 @@ li[data-address] > h2 {
   padding: 10%;
 }
 @media screen and (min-width: 990px){
-  .directory-user{
-    width: 30%;
-    height: 89%;
-    padding: 3%;
-    margin: 5% 0 0 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: -1;
+  .directory-user {
+   width:30%;
+   height:89%;
+   padding:3%;
+   margin:0;
+   position:absolute;
+   right:0;
+   top:70px;
+   z-index:-1
   }
-  .account{
-    margin-top: 5%;
-  }
+
   .directory-address{display: block;}
   .button-address{display: none;}
   .order-container{
@@ -849,9 +847,15 @@ li[data-address] > h2 {
     color:  #fff;
   }
   .address-box{background-color:  #D0D2D3;}
-  .button-address{
+  /*.button-address{
     width:  50%;
     position:   relative  ;
     right: -145px;
+  }*/
+  #MainContent {
+    padding-top: 70px;
+  }
+  .addressmenu-icon{
+    display: none;
   }
 }
