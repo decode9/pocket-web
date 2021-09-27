@@ -795,7 +795,7 @@ li[data-address] > h2 {
    position:absolute;
    right:0;
    top:70px;
-   z-index:-1
+   z-index:0;
   }
 
   .directory-address{display: block;}
@@ -825,7 +825,7 @@ li[data-address] > h2 {
     position: absolute;
     background-color: #f1f1f1;
     left: 0;
-    z-index: -2;
+    z-index: -1;
   }
   .user-details{
     width: 100%;
