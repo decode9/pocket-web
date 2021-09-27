@@ -1,34 +1,12 @@
 {{ 'customer.css' | asset_url | stylesheet_tag }}
 
 <div class="customer account">
-  <div class="directory-user">
-    <div class="user-details">
-
-      <h1>{{ customer.first_name }} {{customer.last_name}} </h1>
+  <div class="orderContent">
+    <div class="order-title">
+      <h1> {{ 'customer.account.title' | t}} </h1>
+      <h2>{{ 'customer.orders.title' | t }}</h2>
     </div>
-    <input class="addressinput" type="checkbox"  id="addressclick">
-    <label class="addressmenu-icon" for="addressclick">
-        <p class="button-address">Direcciones guardadas</p>
-    </label>
-    <div class="directory-address">
-       <h2>{{ 'customer.account.details' | t }}</h2>
-       <div class="address-box">
-        {{ customer.default_address | format_address }} 
-       </div>
-       <a href="{{ routes.account_addresses_url }}" class="button-address">
-          {{ 'customer.account.view_addresses' | t }}
-       </a>
-       <label class="addressmenu-icon" for="addressclick">
-        <span>cerrar</span>
-    </label>
-    </div>
-  </div>
-    
-      <div class="order-title">
-        <h1> {{ 'customer.account.title' | t}} </h1>
-        <h2>{{ 'customer.orders.title' | t }}</h2>
-      </div>
-      <div class="order-container">
+    <div class="order-container">
       {% paginate customer.orders by 20 %}
         {%- if customer.orders.size > 0 -%}
         <div class="order-list">
@@ -108,6 +86,31 @@
           {%- endif -%}
         {%- endif -%}
       {% endpaginate %}
+    </div>
+  </div>
+  <div class="directory-user">
+    <div class="user-details">
+
+      <h1>{{ customer.first_name }} {{customer.last_name}} </h1>
+    </div>
+    <input class="addressinput" type="checkbox"  id="addressclick">
+    <label class="addressmenu-icon" for="addressclick">
+        <p class="button-address">Direcciones guardadas</p>
+    </label>
+    <div class="directory-address">
+        <div class="address-box">
+          <h2>{{ 'customer.account.details' | t }}</h2>
+          <div>
+            {{ customer.default_address | format_address }}
+          </div> 
+        </div>
+        <a href="{{ routes.account_addresses_url }}" class="button-address">
+          {{ 'customer.account.view_addresses' | t }}
+        </a>
+        <label class="addressmenu-icon" for="addressclick">
+          <span>cerrar</span>
+        </label>
+      </div>
     </div>
   </div>
 </div>
