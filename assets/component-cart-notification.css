@@ -12,7 +12,7 @@
   border-style: solid;
   border-width: 0 0 0.1rem;
   padding: 2.5rem 3.5rem;
-  position: absolute;
+  position: fixed;
   right: 0;
   transform: translateY(-100%);
   visibility: hidden;
@@ -24,7 +24,7 @@
   .cart-notification {
     border-width: 0 0.1rem 0.1rem;
     max-width: 36.8rem;
-    right: 4rem;
+    right: 6rem;
   }
 }
 
@@ -38,6 +38,11 @@
   transition: transform var(--duration-default) ease, visibility 0s;
   visibility: visible;
   margin-top: 33%;
+}
+@media screen and (min-width: 990px){
+  .cart-notification.active{
+    margin-top: 75px;
+  }
 }
 
 .cart-notification__header {
