@@ -237,3 +237,27 @@ cart-items {
 .pay-info{
   font-size: 15px;
 }
+
+@media screen and (min-width: 990px){
+  .cart__blocks{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}
+
+/*
+
+@media screen and (min-width: 990px) {
+  .cart-item {
+    width: 80%;
+  }
+}
+.cart-list {
+  justify-content: end;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+*/
