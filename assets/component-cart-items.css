@@ -322,7 +322,10 @@ cart-remove-button .icon-remove {
   .cart-item__totals {
     align-self: flex-end;
   }
-
+  .cart-item__quantity {
+    text-align: center;
+    margin: 0 60px;
+  }
   .cart-item__details {
     align-self: flex-start;
     margin: 0 30px;
@@ -331,12 +334,15 @@ cart-remove-button .icon-remove {
   .cart-item {
     justify-content: flex-start;
   }
-
+  .price--end {
+    justify-content: flex-start;
+    min-width: 135px;
+  }
   .buttomer {
-    width: calc(100% - 225px);
-    justify-content: space-between;
+    width: 500px;
+    justify-content: space-around;
     position: absolute;
-    right: 20px;
+    left: 206px;
   }
 
   .right {
