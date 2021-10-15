@@ -45,7 +45,7 @@ class CollectionFiltersForm extends HTMLElement {
     if (productGrid) productGrid.querySelector('.collection').classList.add('loading');
 
     sections.forEach((section) => {
-      const url = `${window.location.pathname}?section_id=${section.section}&${searchParams}`;
+      const url = `${window.location.pathname}?${searchParams}`;
       const filterDataUrl = element => element.url === url;
 
       this.filterData.some(filterDataUrl) ?
@@ -57,11 +57,11 @@ class CollectionFiltersForm extends HTMLElement {
   }
 
   renderSectionFromFetch(url, section, event) {
+    location.href = url
     fetch(url)
       .then(response => response.text())
       .then((responseText) => {
         const html = responseText;
-        console.log(html)
         this.filterData = [...this.filterData, { html, url }];
         this.renderFilters(html, event);
         this.renderProductGrid(html);
@@ -76,7 +76,7 @@ class CollectionFiltersForm extends HTMLElement {
 
   renderProductGrid(html) {
     const productGrid = document.getElementById('CollectionProductGrid')
-    console.log(html)
+
     const domParser = new DOMParser().parseFromString(html, 'text/html').getElementById('CollectionProductGrid')
 
     productGrid.querySelector('.collection').classList.remove('loading');
