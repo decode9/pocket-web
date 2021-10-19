@@ -3,6 +3,10 @@
     "colors_solid_button_labels": "#000000",
     "colors_background_1": "#ffffff",
     "colors_background_2": "#000000",
+    "checkout_input_background_color_mode": "transparent",
+    "checkout_sidebar_background_color": "#000000",
+    "checkout_accent_color": "#445958",
+    "checkout_button_color": "#f7be00",
     "sections": {
       "announcement-bar": {
         "type": "announcement-bar",
