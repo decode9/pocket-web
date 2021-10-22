@@ -123,6 +123,16 @@
                 {{ product.title | escape }}
               </strong>
             </h3>
+            {%- when 'price' -%}
+              <div class="no-js-hidden price-container" id="price-{{ section.id }}" {{ block.shopify_attributes }}>
+                {%- render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large' -%}
+              </div>
+              <div {{ block.shopify_attributes }}>
+                {%- form 'product', product, id: 'product-form-installment', class: 'installment caption-large' -%}
+                  <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+                  {{ form | payment_terms }}
+                {%- endform -%}
+              </div>
           {%- when 'description' -%}
             {%- if product.description != blank -%}
               <div class="product__description rte">
@@ -231,16 +241,7 @@
                     </button>
                   </quantity-input>
                 </div>
-              {%- when 'price' -%}
-              <div class="no-js-hidden price-container" id="price-{{ section.id }}" {{ block.shopify_attributes }}>
-                {%- render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large' -%}
-              </div>
-              <div {{ block.shopify_attributes }}>
-                {%- form 'product', product, id: 'product-form-installment', class: 'installment caption-large' -%}
-                  <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
-                  {{ form | payment_terms }}
-                {%- endform -%}
-              </div>
+             
             </div>
             {%- when 'buy_buttons' -%}
               <div class="product-form-container" {{ block.shopify_attributes }}>
@@ -291,39 +292,7 @@
 
               <script src="{{ 'pickup-availability.js' | asset_url }}" defer="defer"></script>
           </div>
-          {%- when 'share' -%}
-            <share-button class="share-button" {{ block.shopify_attributes }}>
-              <button class="share-button__button button button--tertiary hidden">
-                {% render 'icon-share' %}
-                {{ 'general.share.share' | t }}
-              </button>
-              <details>
-                <summary class="share-button__button button button--tertiary">
-                  {{ 'general.share.share' | t }}
-                </summary>
-                <div class="share-button__fallback">
-                  <div class="field">
-                    <input type="text"
-                          class="field__input"
-                          id="url"
-                          value="{{ shop.url | append: product.url }}"
-                          placeholder="{{ 'general.share.share_url' | t }}"
-                          onclick="this.select();"
-                          readonly
-                    >
-                    <label class="field__label" for="url">{{ 'general.share.share_url' | t }}</label>
-                  </div>
-                  <button class="button button--tertiary">
-                    {% render 'icon-clipboard' %}
-                    {{ 'general.share.copy_to_clipboard' | t }}
-                  </button>
-                  <span id="ShareMessage-{{ section.id }}" class="share-button__message hidden" role="status" aria-hidden="true">
-                    {{ 'general.share.success_message' | t }}
-                  </span>
-                </div>
-              </details>
-            </share-button>
-            <script src="{{ 'share.js' | asset_url }}" defer="defer"></script>
+
           {%- when 'collapsible_tab' -%}
             <div class="product__accordion accordion" {{ block.shopify_attributes }}>
               <details>

@@ -122,13 +122,11 @@
 
 .image-with-text__heading {
   margin-bottom: 0;
-  font-family: 'AvenirBlack';
 }
 
 .image-with-text__text p {
   margin-top: 0;
   margin-bottom: 1rem;
-  font-family: 'AvenirRoman';
 }
 .image-with-text__media img{
   background-color: #000;

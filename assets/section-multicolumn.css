@@ -299,7 +299,7 @@
 }
 .valores-text p {
   text-align: center;
-  font-family: 'AvenirRoman';
+  font-family: var(--font-body-family);
 }
 .valores-item {
   padding: 1.5%;
@@ -311,7 +311,7 @@
 }
 
 .valores-card__info h3 {
-  font-family: 'AvenirRoman';
+  font-family: var(--font-body-family);
 }
 
 .team-list {
