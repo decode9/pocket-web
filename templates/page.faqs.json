@@ -1,0 +1,102 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+      }
+    },
+    "1634575245deada0ca": {
+      "type": "mc-faqs",
+      "blocks": {
+        "1634575245deada0ca-0": {
+          "type": "column",
+          "settings": {
+            "title": "¿Cómo registrarse en pocket?",
+            "text": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.<\/p>"
+          }
+        },
+        "1634575245deada0ca-1": {
+          "type": "column",
+          "settings": {
+            "title": "¿Cómo acceder a tu cuenta de pocket?",
+            "text": "<p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains.<\/p>"
+          }
+        },
+        "1634575245deada0ca-2": {
+          "type": "column",
+          "settings": {
+            "title": "¿Cómo agregar items al carro de compras?",
+            "text": "<p>...<\/p>"
+          }
+        },
+        "1634575245deada0ca-3": {
+          "type": "column",
+          "settings": {
+            "title": "¿Cómo eliminar objetos del carro de compras?",
+            "text": "<p>...<\/p>"
+          }
+        },
+        "aed9ee2e-1ef1-4ba5-b1b7-dd3d3c677668": {
+          "type": "column",
+          "settings": {
+            "title": "¿Cómo recuperar la contraseña?",
+            "text": "<p>...<\/p>"
+          }
+        },
+        "814dc47a-f3d7-4788-9760-8f54645c0308": {
+          "type": "column",
+          "settings": {
+            "title": "¿Cómo cambiar la contraseña?",
+            "text": "<p>...<\/p>"
+          }
+        },
+        "5af776ab-83ae-447f-a29a-db702b4bdd1d": {
+          "type": "column",
+          "settings": {
+            "title": "¿Cómo agregar direcciones del usuario?",
+            "text": "<p>...<\/p>"
+          }
+        },
+        "8b61624a-7f53-41ed-a3b7-0b8c087d14d9": {
+          "type": "column",
+          "settings": {
+            "title": "¿Cuáles son nuestros metodos de pago?",
+            "text": "<p>...<\/p>"
+          }
+        },
+        "953816c4-8b03-41c1-b59d-160617178590": {
+          "type": "column",
+          "settings": {
+            "title": "¿Cómo comprar en pocket?",
+            "text": "<p>...<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "1634575245deada0ca-0",
+        "1634575245deada0ca-1",
+        "1634575245deada0ca-2",
+        "1634575245deada0ca-3",
+        "aed9ee2e-1ef1-4ba5-b1b7-dd3d3c677668",
+        "814dc47a-f3d7-4788-9760-8f54645c0308",
+        "5af776ab-83ae-447f-a29a-db702b4bdd1d",
+        "8b61624a-7f53-41ed-a3b7-0b8c087d14d9",
+        "953816c4-8b03-41c1-b59d-160617178590"
+      ],
+      "settings": {
+        "title": "¡Hola! ¿Cómo podemos ayudarte?",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "Button label",
+        "button_link": "",
+        "swipe_on_mobile": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1634575245deada0ca"
+  ]
+}
