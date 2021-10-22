@@ -15,7 +15,7 @@
     <h2 class="title title--primary title-cart">{{ 'sections.cart.empty' | t }}</h2>
     <a href="{{ routes.all_products_collection_url }}" class="title-link column-flex">
       <img class="cart-image-warning" src="https://cdn.shopify.com/s/files/1/0586/1621/7787/files/carrito.png?v=1628825263">
-      {{ 'general.continue_shopping' | t }}
+      <button class='button-continue'>{{ 'general.continue_shopping' | t }}</button>
     </a>
   </div>
 
@@ -26,7 +26,8 @@
             <ul class="cart-list">
               {%- for item in cart.items -%}
                 <li class="cart-item" id="CartItem-{{ item.index | plus: 1 }}">
-                  
+                    <div class='oneSide'>
+
                     <div class="cart-item__media">
                       {% if item.image %}
                         <img class="cart-item__image"
@@ -97,8 +98,39 @@
                         </svg>
                       </p>
                     </div>
+                    </div>
                     <div class="buttomer">
+                      <cart-remove-button id="Remove-{{ item.index | plus: 1 }}" data-index="{{ item.index | plus: 1 }}">
+                        <a href="{{ item.url_to_remove }}" class="button button--tertiary" aria-label="{{ 'sections.cart.remove_title' | t: title: item.title }}">
+                          {% render 'icon-remove' %}
+                        </a>
+                      </cart-remove-button>
                       <div class="quantity-total">
+
+                        <div class="cart-item__quantity">
+                          <label class="medium-down" for="Quantity-{{ item.index | plus: 1 }}">
+                            {{ 'products.product.quantity.label' | t }}
+                          </label>
+                          <quantity-input class="quantity">
+                            <button class="quantity__button no-js-hidden" name="minus" type="button">
+                              <span class="visually-hidden">{{ 'products.product.quantity.decrease' | t: product: item.product.title | escape }}</span>
+                              {% render 'icon-minus' %}
+                            </button>
+                            <input class="quantity__input"
+                              type="number"
+                              name="updates[]"
+                              value="{{ item.quantity }}"
+                              min="0"
+                              aria-label="{{ 'products.product.quantity.input_label' | t: product: item.product.title | escape }}"
+                              id="Quantity-{{ item.index | plus: 1 }}"
+                              data-index="{{ item.index | plus: 1 }}"
+                            >
+                            <button class="quantity__button no-js-hidden" name="plus" type="button">
+                              <span class="visually-hidden">{{ 'products.product.quantity.increase' | t: product: item.product.title | escape }}</span>
+                              {% render 'icon-plus' %}
+                            </button>
+                          </quantity-input>
+                        </div>
                         <div class="cart-item__totals">
                           <div class="loading-overlay hidden">
                             <div class="loading-overlay__spinner">
@@ -124,36 +156,7 @@
                             {%- endif -%}
                           </div>
                         </div>
-                        <div class="cart-item__quantity">
-                          <label class="medium-down" for="Quantity-{{ item.index | plus: 1 }}">
-                            {{ 'products.product.quantity.label' | t }}
-                          </label>
-                          <quantity-input class="quantity">
-                            <button class="quantity__button no-js-hidden" name="minus" type="button">
-                              <span class="visually-hidden">{{ 'products.product.quantity.decrease' | t: product: item.product.title | escape }}</span>
-                              {% render 'icon-minus' %}
-                            </button>
-                            <input class="quantity__input"
-                              type="number"
-                              name="updates[]"
-                              value="{{ item.quantity }}"
-                              min="0"
-                              aria-label="{{ 'products.product.quantity.input_label' | t: product: item.product.title | escape }}"
-                              id="Quantity-{{ item.index | plus: 1 }}"
-                              data-index="{{ item.index | plus: 1 }}"
-                            >
-                            <button class="quantity__button no-js-hidden" name="plus" type="button">
-                              <span class="visually-hidden">{{ 'products.product.quantity.increase' | t: product: item.product.title | escape }}</span>
-                              {% render 'icon-plus' %}
-                            </button>
-                          </quantity-input>
-                        </div>
                       </div>
-                      <cart-remove-button id="Remove-{{ item.index | plus: 1 }}" data-index="{{ item.index | plus: 1 }}">
-                        <a href="{{ item.url_to_remove }}" class="button button--tertiary" aria-label="{{ 'sections.cart.remove_title' | t: title: item.title }}">
-                          {% render 'icon-remove' %}
-                        </a>
-                      </cart-remove-button>
                     </div>
                 </li>
               {%- endfor -%}

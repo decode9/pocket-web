@@ -845,7 +845,7 @@ a.product__text {
     padding: 8% 5%;
   }
   .price-quantity {
-    width: 100%;
+    width: 50%;
     margin-top: 1rem;
   }
   .product-form-container {

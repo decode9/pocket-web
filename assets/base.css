@@ -2465,6 +2465,9 @@ a {
 }
 
 @media screen and (max-width: 990px) {
+  .header{
+    height: 140px;
+  }
   .ofertTitle {
     margin-top: 40px;
   }
@@ -2516,10 +2519,11 @@ a {
     align-items: center;
     justify-content: center;
   }
+  #MainContent {
+    padding-top: 140px;
+  }
 }
 
 @media screen and (max-width: 750px) {
-  #MainContent {
-    padding-top: 130px;
-  }
+  
 }
