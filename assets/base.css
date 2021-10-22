@@ -1,18 +1,4 @@
 /* Color custom properties */
-@font-face {
-  font-family: 'AvenirBlack';
-  src: url('/assets/AvenirLTStd-Black.otf');
-}
-
-@font-face {
-  font-family: 'AvenirBook';
-  src: url('/assets/AvenirLTStd-Book.otf');
-}
-
-@font-face {
-  font-family: 'AvenirRoman';
-  src: url('/assets/AvenirLTStd-Roman.otf');
-}
 
 :root,
 .color-background-1 {
@@ -1275,7 +1261,7 @@ deferred-media {
 
 .field__label,
 .customer .field label {
-  font-family: 'AvenirBook';
+  font-family: var(--font-body-family);
   font-size: 1.2rem;
   left: 2rem;
   top: 1rem;
@@ -1642,6 +1628,7 @@ input[type='checkbox'] {
 }
 
 .header {
+  height: 83px;
   display: grid;
   grid-template-areas: 'left-icon heading icons';
   grid-template-columns: 1fr 2fr 1fr;
@@ -1793,8 +1780,8 @@ input[type='checkbox'] {
   position: relative;
 }
 
-
 @media screen and (max-width: 989px) {
+  
   menu-drawer ~ .header__icons .header__icon--account {
     display: none;
   }
@@ -2057,16 +2044,22 @@ details-disclosure > details {
 }
 
 .login_p {
-  margin: 0 1.2rem;
+  margin: 0;
   text-decoration: none;
   background-color: #f5be0b;
   padding: 0.5rem 0;
   color: black;
+  text-align: center;
+  font-size: 1.2rem;
+  width: 110px;
 }
 .register_p {
-  margin: 0 1.2rem;
+  margin: 0;
   text-decoration: none;
   padding: 0.5rem 0;
+  text-align: center;
+  font-size: 1.2rem;
+  width: 110px;
 }
 
 .header__icons_hidden {
@@ -2139,13 +2132,13 @@ details-disclosure > details {
   justify-content: space-between;
 }
 .CategoryTitle {
-  font-family: 'AvenirRoman';
+  font-family: var(--font-heading-family);
 }
 .productTitle {
   font-size: 15px;
   margin: 0;
   font-weight: 600;
-  font-family: 'AvenirBlack';
+  font-family: var(--font-heading-family);
 }
 
 .productDescription {
@@ -2196,7 +2189,7 @@ details-disclosure > details {
 .collectionFilters {
   width: 300px;
   background-color: #f1f1f2;
-  box-shadow: 0px 4px 4px #000;
+  box-shadow: 0px 0px 4px #000;
   padding: 30px;
   box-sizing: border-box;
 }
@@ -2212,7 +2205,7 @@ details-disclosure > details {
   background: transparent;
   border: 2px solid #f5be0b;
   cursor: pointer;
-  font-family: 'AvenirRoman';
+  font-family: var(--font-body-family);
 }
 .collectionFilterBox {
   width: 100%;
@@ -2223,16 +2216,16 @@ details-disclosure > details {
   border: 2px solid #f5be0b;
   padding: 0.9rem !important;
   margin: 10px 0;
-  font-family: 'AvenirRoman';
+  font-family: var(--font-body-family);
 }
 .priceFilterSummary{
   margin-bottom: 20px;
 }
 .field__currency{
-  font-family: 'AvenirRoman';
+  font-family: var(--font-body-family);
 }
 .filterLabel {
-  font-family: 'AvenirRoman';
+  font-family: var(--font-body-family);
 }
 .maxFilterLabel {
   font-size: 12px;
@@ -2426,7 +2419,7 @@ details-disclosure > details {
   align-items: center;
   justify-content: flex-start;
   margin-bottom: 1rem;
-  font-family: 'AvenirRoman';
+  font-family:var(--font-body-family);
 }
 
 .linkBox {
@@ -2459,7 +2452,11 @@ a {
 .collectionMainTitle {
   font-size: 30px;
   text-transform: capitalize;
-  font-family: 'AvenirBlack';
+  font-family: var(--font-heading-family);
+}
+
+.header__icon--account {
+  margin: 0 1rem;
 }
 
 .deployFilters {

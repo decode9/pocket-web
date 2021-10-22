@@ -805,6 +805,8 @@ a.product__text {
   display: flex;
   flex-direction: column;
   width: 45%;
+  align-items: center;
+  justify-content: flex-start;
 }
 .quantity__button {
   background-color: #d0d2d3;
@@ -814,10 +816,11 @@ a.product__text {
   display: flex;
   margin: 0;
   width: 45%;
-  background-color: #f1f1f1;
+  font-size: 2rem;
 }
 .price-quantity {
   margin: 0;
+  margin-top: 2rem;
   margin-bottom: 5%;
   display: flex;
   flex-direction: row;
@@ -842,8 +845,8 @@ a.product__text {
     padding: 8% 5%;
   }
   .price-quantity {
-    flex-direction: column;
-    width: 45%;
+    width: 100%;
+    margin-top: 1rem;
   }
   .product-form-container {
     width: 45%;
